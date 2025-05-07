@@ -6,7 +6,7 @@ from .settings import (
 )
 
 
-@api_view('')
+@api_view()
 def root_route(request):
     return Response({
         "message": "Welcome to my lobolo insurance API!"
