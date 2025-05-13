@@ -1,5 +1,5 @@
 .App {
-    font-family: "Transitional serif", sans-serif;
+    font-family: "Transitional serif";
     background-color: #faf7f2;
     min-height: 100vh;
 }
@@ -19,4 +19,10 @@ a {
 a:hover {
     color: #6b4e35;
     transition: ease-in-out 0.3s;
+}
+
+.SignUpImage {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
