@@ -1,0 +1,22 @@
+.App {
+    font-family: "Transitional serif", sans-serif;
+    background-color: #faf7f2;
+    min-height: 100vh;
+}
+.Main {
+    padding-top: 81px;
+}
+
+.Logo {
+    border-radius: 50px;
+}
+
+a {
+    color: #362b21;
+    transition: ease-in-out 0.3s;
+}
+
+a:hover {
+    color: #6b4e35;
+    transition: ease-in-out 0.3s;
+}
