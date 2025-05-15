@@ -110,7 +110,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     os.environ.get('CLIENT_ORIGIN'),
-    'https://127.0.0.1:8000'
+    '127.0.0.1:8000'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
