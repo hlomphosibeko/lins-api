@@ -8,7 +8,6 @@ import "./api/axiosDefaults";
 
 
 function App() {
-
   return (
     <div className={styles.App}>
       <NavBar />
@@ -19,12 +18,9 @@ function App() {
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route render={() => <p>Page not found!</p>} /> 
         </Switch>
-        
-        
-
       </Container>
     </div>
-  );
+  );  
 }
 
 export default App;
