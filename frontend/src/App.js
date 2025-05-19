@@ -9,6 +9,7 @@ import PostCreateForm from './pages/posts/PostCreateForm';
 import PostPage from './pages/posts/PostPage';
 import PostsPage from './pages/posts/PostsPage';
 import { useCurrentUser } from './contexts/CurrentUserContext';
+import HomePage from './components/HomePage';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
       <NavBar />
       <Container className={styles.Main}>
         <Switch>
-          <Route exact path="/" render={() => <h1>Home Page</h1>} />
+          <Route exact path="/" render={() => <HomePage />} />
           <Route exact path="/posts/page" render={() => (
             <PostsPage message="No results found. Adjust the search keyword." />
           )} />
