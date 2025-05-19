@@ -14,7 +14,7 @@
     border: 1px solid #1f1812;
 }
 .Logo {
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 a {
@@ -31,6 +31,7 @@ a:hover {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    border-radius: 50%;
 }
 
 .Image {
@@ -71,7 +72,7 @@ i {
 i:hover {
   cursor: pointer;
   transition: color ease-in-out 0.3s;
-  color: #2142b2;
+  color: #4a3a2d;
 }
 
 figure {
