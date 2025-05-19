@@ -10,6 +10,7 @@ import PostPage from './pages/posts/PostPage';
 import PostsPage from './pages/posts/PostsPage';
 import { useCurrentUser } from './contexts/CurrentUserContext';
 import HomePage from './components/HomePage';
+import PostEditForm from "./pages/posts/PostEditForm";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
       <Container className={styles.Main}>
         <Switch>
           <Route exact path="/" render={() => <HomePage />} />
-          <Route exact path="/posts/page" render={() => (
+          <Route exact path="/posts" render={() => (
             <PostsPage message="No results found. Adjust the search keyword." />
           )} />
           <Route exact path="/testimonials" render={() => (
@@ -39,6 +40,7 @@ function App() {
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />}  />
+          <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route render={() => <p>Page not found!</p>} /> 
         </Switch>
       </Container>

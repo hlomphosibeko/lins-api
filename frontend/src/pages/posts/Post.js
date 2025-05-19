@@ -2,10 +2,9 @@ import React from "react";
 import styles from "../../styles/Post.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
-import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { MoreDropdown } from "../../components/MoreDropdown";
 
 const Post = (props) => {
@@ -30,8 +29,8 @@ const Post = (props) => {
   const history = useHistory();
 
   const handleEdit = () => {
-    history.push(`/posts/${id}/edit`)
-  }
+    history.push(`/posts/${id}/edit`);
+  };
 
   const handleDelete = async () => {
     try {
@@ -44,15 +43,15 @@ const Post = (props) => {
 
   const handleLike = async () => {
     try {
-        const {data} = await axiosRes.post('/likes/', {post:id});
-        setPosts((prevPosts) => ({
-            ...prevPosts,
-            results: prevPosts.results.map((post) => {
-                return post.id === id
-                ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
-                : post;
-            }),
-        }));
+      const {data} = await axiosRes.post('/likes/', {post:id});
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+            return post.id === id
+            ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
+            : post;
+        }),
+      }));
     } catch(err) {
         console.log(err)
     }
@@ -60,15 +59,15 @@ const Post = (props) => {
 
   const handleUnlike = async () => {
     try {
-        await axiosRes.delete('/likes/', {post:id});
-        setPosts((prevPosts) => ({
-            ...prevPosts,
-            results: prevPosts.results.map((post) => {
-                return post.id === id
-                ? { ...post, likes_count: post.likes_count + 1, like_id: null }
-                : post;
-            }),
-        }));
+      await axiosRes.delete(`/likes/${like_id}/`);
+      setPosts((prevPosts) => ({
+          ...prevPosts,
+          results: prevPosts.results.map((post) => {
+              return post.id === id
+              ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+              : post;
+          }),
+      }));
     } catch(err) {
         console.log(err)
     }
@@ -84,7 +83,11 @@ const Post = (props) => {
           </Link>
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
-            {is_owner && postPage && <MoreDropdown handleEdit={handleEdit} handleDelete={handleDelete} />}
+            {is_owner && postPage && (
+              <MoreDropdown
+               handleEdit={handleEdit} 
+               handleDelete={handleDelete} />
+            )}
           </div>
         </Media>
       </Card.Body>

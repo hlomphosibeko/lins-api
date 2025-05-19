@@ -38,10 +38,10 @@ function PostsPage({ message, filter = "" }) {
     setHasLoaded(false);
     const timer = setTimeout(() => {
         fetchPosts();
-    }, 1000)
+    }, 1000);
     return () => {
         clearTimeout(timer);
-    }
+    };
   }, [filter, query, pathname]);
 
   return (
@@ -65,15 +65,15 @@ function PostsPage({ message, filter = "" }) {
         {hasLoaded ? (
           <>
             {posts.results.length ? (
-                <InfiniteScroll
-                    children={posts.results.map((post) => (
-                        <Post key={post.id} {...post} setPosts={setPosts} />
-                    ))}
-                    dataLength={posts.results.length}
-                    loader={<Asset spinner />}
-                    hasMore={!!posts.next}
-                    next={() => fetchMoreData(posts, setPosts)}
-                />
+              <InfiniteScroll
+                children={posts.results.map((post) => (
+                  <Post key={post.id} {...post} setPosts={setPosts} />
+                ))}
+                dataLength={posts.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!posts.next}
+                next={() => fetchMoreData(posts, setPosts)}
+              />
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />
