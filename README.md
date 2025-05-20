@@ -1,40 +1,46 @@
 # Lobola Insurance
 
-Lobola is traditional SouthernAfrican custom in which a man pays a bride price--usually in the form of cattle or money--to the family of the woman he wishes to marry. It is practiced in several cultures, including amoung the Zulu, Xhosa, Tswana, and Shona people. This site hopes to help many young men from going into debt or borrowing money to pay lobola. Insurance helps reduce the financial risk and provides peace of mind during a culturally important but expensive process. The site is mainly targeting young men who wish to marry and yet can't afford. The site does not only offer insurance, but also a platform where members can share content of their Lobola events, other members can read, and comment on the content shared.
+Lobola is traditional Southern African custom in which a man pays a bride price--usually in the form of cattle or money--to the family of the woman he wishes to marry. It is practiced in several cultures. This site hopes to help many people from going into debt or borrowing money to pay lobola. Insurance helps reduce the financial risk and provides peace of mind during a culturally important but expensive process. The site is mainly targeting people who wish to marry and yet can't afford. The site does not only offer insurance, but also a platform where members can share content of their Lobola events, other members can read, and comment on the content shared. This insurance app is not only targeted at South Africans, but the world as it keeps diversing. There are people who go into multiracial marriages, due to traveling a lot. So when people learn about customs and cultures of South Africa, then they will find this insurance app useful.
 
 
 
-## Features
+## Features Frontend
 
 ### Navigation Bar
+*
 
-![alt text](image-3.png)
+![Hero Image](readme.docs/hero-image.png)
 
-![alt text](image.png)
+![Logged in Navbar](readme.docs/navbar.png)
 
 
-![alt text](image-1.png)
+![Upload Image](readme.docs/image-upload.png)
 
-![alt text](image-2.png)
+![List of posts](readme.docs/post-list.png)
 
 
 ### Sign In Page
 
-![alt text](image-4.png)
+![Sign In page](readme.docs/signin.png)
 
 ### Sign Up Page
 
-![alt text](image-5.png)
+![Sign Up page](readme.docs/signup.png)
 
 
 
 
 ### Features Left To Implement
-
+* When a user clicks on the "Get a Quote" button, they should be redirected to a Coverage plans page where they can select the type of plan they want to get for their ceremony.
+* The "Learn more" button should redirect a user to a page where they can learn more about the app.
+* Create terms and conditions regarding payouts
+* On the Home Page, I would like to add more details regarding the insurance I offer
 
 ## Testing
 
-### Manual Testing
+### Manual Testing Frontend
+* When a user tries to submit an empty signin/signup form, the form is defensive. Users have to complete all fields. Please see image below:
+![Defensive Form](readme.docs/defensive-form.png)
 
 
 
@@ -43,6 +49,10 @@ Lobola is traditional SouthernAfrican custom in which a man pays a bride price--
 
 
 ### Unfixed Bugs
+
+* When I access the app, before I signin or click any button I get the below errors on dev tools. The default profile image is not readable. Please see image below:
+
+![Dev Tools](readme.docs/console.png)
 
 
 ## Deployement
