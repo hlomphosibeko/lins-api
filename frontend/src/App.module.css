@@ -1,61 +1,31 @@
 .App {
-    font-family: "Transitional serif";
-    background-color: #faf7f2;
-    min-height: 100vh;
+  font-family: "Transitional serif";
+  background-color: #faf7f2;
+  min-height: 100vh;
 }
-.Main {
-    padding-top: 81px;
-}
-
-.Content {
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #1f1812;
-}
-.Logo {
-    border-radius: 10px;
-}
-
-a {
-    color: #362b21;
-    transition: ease-in-out 0.3s;
-}
-
-a:hover {
-    color: #6b4e35;
-    transition: ease-in-out 0.3s;
-}
-
-.FillerImage {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-}
-
-.Image {
-  max-height: 40vh;
-  max-width: 100%;
-  object-fit: contain;
-}
-
 * {
   box-sizing: border-box;
 }
 
+.Main {
+  padding-top: 81px;
+}
+
+.Content {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #1f1812;
+}
+
 a {
-  color: #555555;
-  transition: color ease-in-out 0.3s;
+  color: #362b21;
+  transition: ease-in-out 0.3s;
 }
 
 a:hover {
-  text-decoration: none;
-}
-
-a:hover i {
-  color: #2142b2;
-  transition: color ease-in-out 0.3s;
+  color: #6b4e35;
+  transition: ease-in-out 0.3s;
 }
 
 input[type="file"] {
@@ -63,7 +33,7 @@ input[type="file"] {
 }
 
 i {
-  color: #cfced3;
+  color: #362b21;
   font-size: 1.6rem;
   padding: 7px;
   vertical-align: middle;
@@ -72,7 +42,20 @@ i {
 i:hover {
   cursor: pointer;
   transition: color ease-in-out 0.3s;
-  color: #4a3a2d;
+  color: #6b4e35;
+}
+
+.FillerImage {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.Image {
+max-height: 40vh;
+max-width: 100%;
+object-fit: contain;
 }
 
 figure {
