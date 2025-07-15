@@ -65,7 +65,6 @@ DEBUG = 'DEBUG' in os.environ
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'localhost',
-    '127.0.0.1',
 ]
 
 # Application definition
@@ -110,8 +109,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    os.environ.get('CLIENT_ORIGIN'),
-    'http://localhost',
+    os.environ.get('CLIENT_ORIGIN')
 ]
 
 CORS_ALLOW_CREDENTIALS = True
