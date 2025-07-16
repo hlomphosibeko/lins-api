@@ -22,6 +22,7 @@ class ProfileSerializer(serializers.ModelSerializer):
                 owner=user, followed=obj.owner
             ).first()
             return following.id if following else None
+        return None
 
     class Meta:
         model = Profile
