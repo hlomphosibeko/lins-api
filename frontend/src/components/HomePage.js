@@ -5,8 +5,14 @@ import btnStyles from "../styles/Button.module.css";
 import styles from "../styles/HomePage.module.css";
 import ListGroup from 'react-bootstrap/ListGroup';
 import Table from 'react-bootstrap/Table';
+import { useHistory } from 'react-router-dom';
 
 const HomePage = () => {
+    const history = useHistory();
+
+    const handleClick = () => {
+        history.push('/quotes');
+    }
     return (
         <Card className="bg-dark" style={{ width: '55rem' }}>
             <Card.Img
@@ -20,7 +26,8 @@ const HomePage = () => {
                 </Card.Text>
                 <br />
                 <Button
-                 className={`${btnStyles.Button} ${btnStyles.Brown}`}>
+                 className={`${btnStyles.Button} ${btnStyles.Brown}`}
+                 onClick={handleClick}>
                     Get a Quote
                 </Button>
                 <Button
