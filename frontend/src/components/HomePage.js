@@ -19,7 +19,8 @@ const HomePage = () => {
                     Our lobola insurance protects you and your family from unexpected costs while honoring cultural values.
                 </Card.Text>
                 <br />
-                <Button className={`${btnStyles.Button} ${btnStyles.Brown}`}>
+                <Button
+                 className={`${btnStyles.Button} ${btnStyles.Brown}`}>
                     Get a Quote
                 </Button>
                 <Button
