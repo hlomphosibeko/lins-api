@@ -12,6 +12,7 @@ import { useCurrentUser } from './contexts/CurrentUserContext';
 import HomePage from './components/HomePage';
 import PostEditForm from "./pages/posts/PostEditForm";
 import GetAQuote from "./pages/quotes/GetAQuote";
+import ProfilePage from './pages/profiles/ProfilePage';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />}  />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
+          <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
           <Route path="/quotes" render={() => <GetAQuote />} />
           <Route render={() => <p>Page not found!</p>} /> 
         </Switch>
