@@ -13,6 +13,11 @@ const HomePage = () => {
     const handleClick = () => {
         history.push('/quotes');
     }
+
+    const handleMore = () => {
+        history.push('/more');
+    }
+    
     return (
         <Card className="bg-dark" style={{ width: '55rem' }}>
             <Card.Img
@@ -32,6 +37,7 @@ const HomePage = () => {
                 </Button>
                 <Button
                  className={`${btnStyles.Button} ${btnStyles.Secondary}`}
+                 onClick={handleMore}
                  >
                     Learn More 
                 </Button>
