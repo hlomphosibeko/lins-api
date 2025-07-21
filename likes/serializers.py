@@ -14,9 +14,9 @@ class LikeSerializer(serializers.ModelSerializer):
         model = Like
         fields = ['id', 'created_at', 'owner', 'post']
 
-    def create(self, validate_data):
+    def create(self, validated_data):
         try:
-            return super().create(validate_data)
+            return super().create(validated_data)
         except IntegrityError:
             raise serializers.ValidationError({
                 'detail': 'possible dulpicate'
