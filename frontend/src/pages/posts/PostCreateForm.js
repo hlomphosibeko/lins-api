@@ -16,9 +16,10 @@ import Image from "react-bootstrap/Image";
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import Alert from "react-bootstrap/Alert";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function PostCreateForm() {
-
+  useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
@@ -30,7 +31,7 @@ function PostCreateForm() {
   const { title, content, image } = postData;
 
   const imageInput = useRef(null);
-  const history = useHistory()
+  const history = useHistory();
 
   const handleChange = (event) => {
     setPostData({
@@ -41,7 +42,7 @@ function PostCreateForm() {
 
   const handleChangeImage = (event) => {
     if (event.target.files.length) {
-      URL.revokeObjectURL(image)
+      URL.revokeObjectURL(image);
       setPostData({
         ...postData,
         image: URL.createObjectURL(event.target.files[0]),
@@ -86,7 +87,8 @@ function PostCreateForm() {
       <Form.Group>
         <Form.Label>Content</Form.Label>
         <Form.Control
-          type="textarea" 
+          as="textarea" 
+          rows={6}
           name="content"
           value={content}
           onChange={handleChange} />
@@ -146,6 +148,11 @@ function PostCreateForm() {
                  ref={imageInput} />
 
             </Form.Group>
+            {errors?.image?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
