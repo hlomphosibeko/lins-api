@@ -9,8 +9,12 @@ import PostCreateForm from './pages/posts/PostCreateForm';
 import PostPage from './pages/posts/PostPage';
 import PostsPage from './pages/posts/PostsPage';
 import { useCurrentUser } from './contexts/CurrentUserContext';
+import PostEditForm from './pages/posts/PostEditForm';
+import ProfilePage from './pages/profiles/ProfilePage';
+import UsernameForm from './pages/profiles/UsernameForm';
+import UserPasswordForm from "./pages/profiles/UserPasswordForm";
+import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import HomePage from './components/HomePage';
-import PostEditForm from "./pages/posts/PostEditForm";
 import GetAQuote from "./pages/quotes/GetAQuote";
 import LearnMore from './pages/quotes/LearnMore';
 
@@ -28,11 +32,6 @@ function App() {
           <Route exact path="/posts" render={() => (
             <PostsPage message="No results found. Adjust the search keyword." />
           )} />
-          <Route exact path="/testimonials" render={() => (
-            <PostsPage
-             message="No results found. Adjust the search keyword or follow a user."
-             filter={`owner__followed__owner__profile=${profile_id}&`} />
-          )} />
           <Route exact path="/liked" render={() => (
             <PostsPage
              message="No results found. Adjust the search keyword or like a post."
@@ -43,6 +42,22 @@ function App() {
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />}  />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
+          <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route
+            exact
+            path="/profiles/:id/edit/username"
+            render={() => <UsernameForm />}
+          />
+          <Route
+            exact
+            path="/profiles/:id/edit/password"
+            render={() => <UserPasswordForm />}
+          />
+          <Route
+            exact
+            path="/profiles/:id/edit"
+            render={() => <ProfileEditForm />}
+          />
           <Route path="/quotes" render={() => <GetAQuote />} />
           <Route path="/more" render={() => <LearnMore />} />
           <Route render={() => <p>Page not found!</p>} /> 
