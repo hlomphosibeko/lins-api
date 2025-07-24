@@ -64,9 +64,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = [
+    os.environ.get('ALLOWED_HOST'),
     'localhost',
     '127.0.0.1',
-    'lins-api-d9f3116aea51.herokuapp.com'
 ]
 
 # Application definition
