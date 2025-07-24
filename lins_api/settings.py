@@ -66,7 +66,7 @@ DEBUG = 'DEBUG' in os.environ
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'lins-api.herokuapp.com'
+    'lins-api-d9f3116aea51.herokuapp.com'
 ]
 
 # Application definition
