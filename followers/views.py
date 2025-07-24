@@ -11,9 +11,9 @@ class FollowerList(generics.ListCreateAPIView):
     Create a follower, i.e. follow a user if logged in.
     Perform_create: associate the current logged in user with a follower.
     """
-    serializer_class = FollowerSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Follower.objects.all()
+    serializer_class = FollowerSerializer
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
@@ -25,6 +25,6 @@ class FollowerDetail(generics.RetrieveDestroyAPIView):
     No Update view, as we either follow or unfollow users
     Destroy a follower, i.e. unfollow someone if owner
     """
-    serializer_class = FollowerSerializer
-    queryset = Follower.objects.all()
     permission_classes = [IsOwnerOrReadOnly]
+    queryset = Follower.objects.all()
+    serializer_class = FollowerSerializer
