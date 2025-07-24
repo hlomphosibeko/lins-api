@@ -64,8 +64,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = [
-    os.environ.get('ALLOWED_HOST'),
     'localhost',
+    '127.0.0.1',
+    'lins_api.herokuapp.com'
 ]
 
 # Application definition
@@ -110,7 +111,10 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    os.environ.get('CLIENT_ORIGIN')
+    origin for origin in [
+        os.environ.get('CLIENT_ORIGIN'),
+        os.environ.get('CLIENT_ORIGIN_DEV')
+    ] if origin
 ]
 
 CORS_ALLOW_CREDENTIALS = True
