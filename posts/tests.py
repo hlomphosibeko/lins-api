@@ -30,13 +30,13 @@ class PostListViewTests(APITestCase):
 
 class PostDetailViewTests(APITestCase):
     def setUp(self):
-        adam = User.objects.create_user(username='andile', password='pass')
-        brian = User.objects.create_user(username='banele', password='pass')
+        andile = User.objects.create_user(username='andile', password='pass')
+        banele = User.objects.create_user(username='banele', password='pass')
         Post.objects.create(
-            owner=adam, title='a title', content='andiles content'
+            owner=andile, title='a title', content='andiles content'
         )
         Post.objects.create(
-            owner=brian, title='another title', content='baneles content'
+            owner=banele, title='another title', content='baneles content'
         )
 
     def test_can_retrieve_post_using_valid_id(self):
