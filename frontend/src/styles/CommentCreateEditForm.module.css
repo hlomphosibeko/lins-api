@@ -1,12 +1,11 @@
 .Form {
   border: none;
-  border-bottom: 2px #00d1ff solid;
 }
 
 .Button {
   border: none;
-  background-color: #242a3d;
-  color: aliceblue;
+  background-color: #000000;
+  color: #fdf8f1;
   border-radius: 100px;
   padding: 4px 10px;
   min-width: 75px;
