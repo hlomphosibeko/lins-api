@@ -48,9 +48,9 @@ const HomePage = () => {
                     <Table responsive="sm">
                         <thead>
                             <tr>
-                                <th><i class="fa-regular fa-file-lines"></i><br /> Choose Your Plan</th>
-                                <th><i class="fa-solid fa-file-circle-check"></i><br />Apply Securely</th>
-                                <th><i class="fa-solid fa-shield"></i><br />Stay Protected</th>
+                                <th><i className="fa-regular fa-file-lines"></i><br /> Choose Your Plan</th>
+                                <th><i className="fa-solid fa-file-circle-check"></i><br />Apply Securely</th>
+                                <th><i className="fa-solid fa-shield"></i><br />Stay Protected</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -67,9 +67,9 @@ const HomePage = () => {
                     <Table responsive="sm">
                         <thead>
                             <tr>
-                                <th><i class="fa-solid fa-landmark"></i><br /> Respect for Culture</th>
-                                <th><i class="fa-solid fa-wallet"></i><br />Affordable Coverage</th>
-                                <th><i class="fa-regular fa-clock"></i><br />Stay Protected</th>
+                                <th><i className="fa-solid fa-landmark"></i><br /> Respect for Culture</th>
+                                <th><i className="fa-solid fa-wallet"></i><br />Affordable Coverage</th>
+                                <th><i className="fa-regular fa-clock"></i><br />Stay Protected</th>
                             </tr>
                         </thead>
                         <tbody>

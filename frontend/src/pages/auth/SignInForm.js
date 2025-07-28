@@ -35,9 +35,10 @@ function SignInForm() {
     try {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
-      setTokenTimestamp();
+      setTokenTimestamp(data);
       history.goBack();
     } catch (err) {
+      console.log("data ",err.response?.data)
       setErrors(err.response?.data);
     }
   };

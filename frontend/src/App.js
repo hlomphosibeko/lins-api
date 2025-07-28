@@ -32,6 +32,10 @@ function App() {
           <Route exact path="/posts" render={() => (
             <PostsPage message="No results found. Adjust the search keyword." />
           )} />
+          <Route exact path="/testimonial" render={() => (
+            <PostsPage message="No results found. Adjust the search keyword."
+              filter={`owner__followed__owner__profile=${profile_id}&`} />
+          )} />
           <Route exact path="/liked" render={() => (
             <PostsPage
              message="No results found. Adjust the search keyword or like a post."
