@@ -1,18 +1,10 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import Card from "react-bootstrap/Card";
 import ListGroup from 'react-bootstrap/ListGroup';
 import Table from 'react-bootstrap/Table';
-import btnStyles from "../../styles/Button.module.css";
-import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 
 
 function GetAQuote() {
-    const history = useHistory();
-
-    const handleClick = () => {
-        history.push("https://formdump.codeinstitute.net/");
-    };
 
     return (
         <Card style={{ width: '45rem' }} className='text-center'>
@@ -38,7 +30,7 @@ function GetAQuote() {
                     <Table responsive="sm">
                         <thead>
                             <tr>
-                                <th colspan="3"><i class="fa-solid fa-calendar-days"></i>Coverage Period</th>
+                                <th colSpan={3}><i class="fa-solid fa-calendar-days"></i>Coverage Period</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -60,21 +52,15 @@ function GetAQuote() {
                             <tr>
                                 <td>
                                     <strong>Basic Plan Type:</strong> R150/month = R20,000 Maximum Coverage
-                                    <div>'Coming Soon'</div>
+                                    <div><em>'Coming Soon'</em></div>
                                 </td>
                                 <td>
                                     <strong>Standard Plan Type:</strong> R250/month = R40,000 Maximum Coverage 
-                                    <Button 
-                                    className={`${btnStyles.Button} ${btnStyles.Brown}`}
-                                    type="submit"
-                                    onClick={handleClick}>Select Cover Plan</Button>
+                                    <div><em>'Coming Soon'</em></div>
                                 </td>
                                 <td>
                                     <strong>Premium Plan Type:</strong> R400/month = R70,000 Maximum Coverage 
-                                    <Button 
-                                    className={`${btnStyles.Button} ${btnStyles.Brown}`}
-                                    type="submit"
-                                    onClick={handleClick}>Select Cover Plan</Button>
+                                    <div><em>'Coming Soon'</em></div>
                                 </td>
                             </tr>
                         </tbody>  
@@ -84,7 +70,7 @@ function GetAQuote() {
                     <Table responsive="sm">
                         <thead>
                             <tr>
-                                <th><i class="fa-solid fa-thumbtack"></i>Exclusions</th>
+                                <th colSpan={4}><i class="fa-solid fa-thumbtack"></i>Exclusions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -101,7 +87,7 @@ function GetAQuote() {
                     <Table responsive="sm">
                         <thead>
                             <tr>
-                                <th><i class="fa-solid fa-file-lines"></i>Documents Required to apply</th>
+                                <th colSpan={4}><i class="fa-solid fa-file-lines"></i>Documents Required to apply</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -118,7 +104,7 @@ function GetAQuote() {
                     <Table responsive="sm">
                         <thead>
                             <tr>
-                                <th><i class="fa-solid fa-phone"></i>Contact Us</th>
+                                <th colSpan={4}><i class="fa-solid fa-phone"></i>Contact Us</th>
                             </tr>
                         </thead>
                         <tbody>
