@@ -2,12 +2,31 @@
 
 Lobola is traditional Southern African custom in which a man pays a bride price--usually in the form of cattle or money--to the family of the woman he wishes to marry. It is practiced in several cultures. This site hopes to help many people from going into debt or borrowing money to pay lobola. Insurance helps reduce the financial risk and provides peace of mind during a culturally important but expensive process. The site is mainly targeting people who wish to marry and yet can't afford. The site does not only offer insurance, but also a platform where members can share content of their Lobola events, other members can read, and comment on the content shared. This insurance app is not only targeted at South Africans, but the world as it keeps diversing. There are people who go into multiracial marriages, due to traveling a lot. So when people learn about customs and cultures of South Africa, then they will find this insurance app useful.
 
+![hero home page](image.png)
+
+## Features Backend
+
+### Backend Deployement
+* I followed the Advanced Front End: Deployement of both applications instructions
+* The guide assisted in deploying both my React front-end project and my Django API backend as both projects were combined in one workspace.
+* Setting up WhiteNoise for static files
+* Add route to serve the index template
+* Combining both Django and React static files and compiling them
+* Add runtime.txt file to ensure Heroku uses the correct version of Python to deploy my project
+* Test functionality of the URL
+* On the Heroku App, inside Settings, add ALLOWED_HOST and CLIENT_ORIGIN inside Config Vars
+* Go to Deploy page and deploy my project.
 
 
 ## Features Frontend
 
 ### Navigation Bar
-*
+* When a user is not yet logged in, the below is what the navigation bar looks like.
+* It consists of a logo (a cow's head with Lobola Insurance written on it on a white background)
+
+![navbar !loggedin](image-1.png)
+
+
 
 ![Hero Image](readme.docs/hero-image.png)
 
@@ -20,10 +39,13 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 
 
 ### Sign In Page
+* A user is then prompted to sign in if the have already been able to signup
+* A beautiful image of rings shows what the the user is getting themselves into
 
 ![Sign In page](readme.docs/signin.png)
 
 ### Sign Up Page
+* If a user has not signed yet, they can simply signup to be a part of the community. Please see image below:
 
 ![Sign Up page](readme.docs/signup.png)
 
