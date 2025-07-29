@@ -38,7 +38,7 @@ function GetAQuote() {
                     <Table responsive="sm">
                         <thead>
                             <tr>
-                                <th><i class="fa-solid fa-calendar-days"></i>Coverage Period</th>
+                                <th colspan="3"><i class="fa-solid fa-calendar-days"></i>Coverage Period</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -53,17 +53,14 @@ function GetAQuote() {
                     <Table responsive="sm">
                         <thead>
                             <tr>
-                                <th><i class="fa-regular fa-money-bill-1"></i>Premium Options</th>
+                                <th colSpan={3}><i class="fa-regular fa-money-bill-1"></i>Premium Options</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>
                                     <strong>Basic Plan Type:</strong> R150/month = R20,000 Maximum Coverage
-                                    <Button 
-                                    className={`${btnStyles.Button} ${btnStyles.Brown}`}
-                                    type="submit"
-                                    onClick={handleClick}>Select Cover Plan</Button>
+                                    <div>'Coming Soon'</div>
                                 </td>
                                 <td>
                                     <strong>Standard Plan Type:</strong> R250/month = R40,000 Maximum Coverage 

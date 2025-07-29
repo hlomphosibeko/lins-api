@@ -19,7 +19,7 @@ const HomePage = () => {
     }
     
     return (
-        <Card className="bg-dark" style={{ width: '55rem' }}>
+        <Card className="bg-dark">
             <Card.Img
              src="https://res.cloudinary.com/dibjhrwcc/image/upload/v1747603650/hero-image_sf8q4b.png" 
              alt="Hero image" />
