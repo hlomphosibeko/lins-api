@@ -7,24 +7,50 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 ## Features Backend
 
 ### Backend Deployement
-* I followed the Advanced Front End: Deployement of both applications instructions
-* The guide assisted in deploying both my React front-end project and my Django API backend as both projects were combined in one workspace.
-* Setting up WhiteNoise for static files
-* Add route to serve the index template
-* Combining both Django and React static files and compiling them
-* Add runtime.txt file to ensure Heroku uses the correct version of Python to deploy my project
-* Test functionality of the URL
-* On the Heroku App, inside Settings, add ALLOWED_HOST and CLIENT_ORIGIN inside Config Vars
-* Go to Deploy page and deploy my project.
+* Create a database
+* On settings in the Heroku app, add a Config Var DATABASE_URL and paste in the database URL
+* Set up my project to connect to my PostgreSQL from Code Institute database
+* Create a superuser
+* Install package needed to run the project on Heroku
+* Fix a few environment variables
+* Create a Procfile file that will provide the commands to Heroku to build and run the project
+* On Heroku settings, added two more Config Vars: CLOUDINARY_URL and SECRET_KEY
+* Connect Heroku to GitHub
+* Deploy project.
 
 
 ## Features Frontend
 
 ### Navigation Bar
-* When a user is not yet logged in, the below is what the navigation bar looks like.
-* It consists of a logo (a cow's head with Lobola Insurance written on it on a white background)
+- When a user is not yet logged in, the below is what the navigation bar looks like.
+- It consists of a logo (a cow's head with Lobola Insurance written on it on a white background)
 
 ![navbar !loggedin](image-1.png)
+
+- When a user is signed in, the navigation bar shows more links/ pages. Please see below:
+
+![navbar loggedin](image-6.png)
+
+### The home page
+- This includes a photograph of for men (uncles) negotiating the price for the Lobola
+- On the the image is a text overlay which attracts the user to browse through the site
+- Below the text are two buttons, one to get a quote of the insurance offered, and the other is to learn more about the site. Please see image below:
+
+![hero image](image-2.png)
+
+- When a user clicks the 'Get a Quote' button, they are able to view the quotes we offer. Please see below:
+
+![quote](image-4.png)
+
+- The 'Learn More' button shows more information about the insurance site. Please see below:
+
+![learn more](image-5.png)
+
+#### How it works section
+- Below the landing image is a section that tells user what the insurance offeres
+- It is just a brief explanation of what is included. Please see below:
+
+![how it works section](image-3.png)
 
 
 
@@ -78,7 +104,15 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 
 
 ## Deployement
-
+* I followed the Advanced Front End: Deployement of both applications instructions
+* The guide assisted in deploying both my React front-end project and my Django API backend as both projects were combined in one workspace.
+* Setting up WhiteNoise for static files
+* Add route to serve the index template
+* Combining both Django and React static files and compiling them
+* Add runtime.txt file to ensure Heroku uses the correct version of Python to deploy my project
+* Test functionality of the URL
+* On the Heroku App, inside Settings, add ALLOWED_HOST and CLIENT_ORIGIN inside Config Vars
+* Go to Deploy page and deploy my project.
 
 
 ## Credits
