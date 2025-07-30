@@ -6,6 +6,11 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 
 ## Features Backend
 
+### API
+- 
+
+![api profile page](image-16.png)
+
 ### Testing Backend
 #### Validator testing - Python test
 - The settings page had lines that were too long to pass the test. Please see below:
@@ -139,10 +144,20 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 
 ![Dev Tools](readme.docs/console.png)
 
-## User Stories
+## User Stories 
+##### Fulfilled User Stories
 * <strong>View Profile Page:</strong> This user story is to allow users to view other users profiles. This user story was indeed fulfilled.
 * <strong>Edit Posts:</strong> This user story allows users to edit their posts. But another user is restricted from editing another users profile or post.
-* <strong>Display Posts Lists:</strong> 
+* <strong>Display Posts Lists:</strong> As a owner, I created a platform for users to display their posts.
+* <strong>Create Posts:</strong> Users are able to create posts on the site
+* <strong>Navigation Bar:</strong> Users are able to navigate through the navigation bar to get around the site.
+* <strong>Authentication:</strong> Users are able to sign up to my site in order to access and navigate through the insurance site
+* <strong>View Home Page:</strong> Users won't need to be logged in order to view the homepage. The home page has a callout message for the users.
+* <strong>Create Quote Button:</strong> A button is created for users to click on in order to get a quote on the type of insurance that suites them.
+* <strong>Click Learn More Button:</strong> On this button a user is able to read more about what the site offers.
+
+##### Unfulfilled User Story
+* <strong>Create select quote button:</strong> These buttons were supposed to be active so that a user can select the type of quote they can offer. However, now I have decided to add them on future implementations.
 
 
 ## Deployement
@@ -165,11 +180,12 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 * Oisin, a Tutor of CI, helped me with getting my workspaces set up as I was struggling with the commands given to set it up.
 * The Moments Walkthrough helped me set up my workspaces and also with the content.
 * My Mentor helped with the fixes on my project and making sure the project is functioning as it should.
+* I wanted a reminder on how to create handleClick, I got help from [Stackoverflow](https://stackoverflow.com/questions/75640164/react-router-to-redirect-new-page-using-a-button-onclick/75640182)
 
 
 ### Media
-* The images used on this app are taken from various sites: ChatGPT, [Pixabay]https://pixabay.com/images/search/cow%20with%20rings%20%20logo/
-* The logo image used is taken from [ChatGPT]https://chatgpt.com/s/m_6821d556cde88191b13fd8483534c194
+* The images used on this app are taken from various sites: ChatGPT, [Pixabay](https://pixabay.com/images/search/cow%20with%20rings%20%20logo/)
+* The logo image used is taken from [ChatGPT](https://chatgpt.com/s/m_6821d556cde88191b13fd8483534c194)
 * Some of the images were created with ChatGPT to suite the insurance site.
 
 

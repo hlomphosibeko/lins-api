@@ -61,7 +61,7 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEBUG' in os.environ
+DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
@@ -110,7 +110,10 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    os.environ.get('CLIENT_ORIGIN')
+    origin for origin in [
+     os.environ.get('CLIENT_ORIGIN'),
+     os.environ.get('CLIENT_ORIGIN_DEV')
+    ] if origin
 ]
 
 CORS_ALLOW_CREDENTIALS = True
