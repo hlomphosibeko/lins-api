@@ -16,8 +16,16 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 
 ![fixed lines](image-12.png)
 
+#### Python testing
+- I ran tests to see if the functionality of the creating post is okay.
+- The test to see if logged in users can create a post failed.
+- The test to see if not logged in users cant create a post failed. Please see below:
 
+![failed posts tests](image-15.png)
 
+- Here I tested the functionality of creating posts.
+
+![post tests](image-14.png)
 
 ### Backend Deployement
 * Create a database
@@ -121,7 +129,7 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
     * These errors are part of the package and cannot be changed. Please see below:
 
     ![HTML validation](image-13.png)
-    
+
 - Javascript:
 
 
@@ -130,6 +138,11 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 * When I access the app, before I signin or click any button I get the below errors on dev tools. The default profile image is not readable. Please see image below:
 
 ![Dev Tools](readme.docs/console.png)
+
+## User Stories
+* <strong>View Profile Page:</strong> This user story is to allow users to view other users profiles. This user story was indeed fulfilled.
+* <strong>Edit Posts:</strong> This user story allows users to edit their posts. But another user is restricted from editing another users profile or post.
+* <strong>Display Posts Lists:</strong> 
 
 
 ## Deployement
@@ -151,11 +164,13 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 * I have issues with the URLS. A couple of tutors tried to help me position the URL's at the right places namely: Rebecca, Sarah, Roman
 * Oisin, a Tutor of CI, helped me with getting my workspaces set up as I was struggling with the commands given to set it up.
 * The Moments Walkthrough helped me set up my workspaces and also with the content.
+* My Mentor helped with the fixes on my project and making sure the project is functioning as it should.
 
 
 ### Media
 * The images used on this app are taken from various sites: ChatGPT, [Pixabay]https://pixabay.com/images/search/cow%20with%20rings%20%20logo/
 * The logo image used is taken from [ChatGPT]https://chatgpt.com/s/m_6821d556cde88191b13fd8483534c194
+* Some of the images were created with ChatGPT to suite the insurance site.
 
 
 

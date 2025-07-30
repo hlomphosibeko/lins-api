@@ -30,17 +30,17 @@ class PostListViewTests(APITestCase):
 
 class PostDetailViewTests(APITestCase):
     def setUp(self):
-        andile = User.objects.create_user(username='andile', password='pass')
-        banele = User.objects.create_user(username='banele', password='pass')
+        love = User.objects.create_user(username='love', password='pass')
+        patient = User.objects.create_user(username='patient', password='pass')
         Post.objects.create(
-            owner=andile, title='a title', content='andiles content'
+            owner=love, title='a title', content='loves content'
         )
         Post.objects.create(
-            owner=banele, title='another title', content='baneles content'
+            owner=patient, title='another title', content='patients content'
         )
 
     def test_can_retrieve_post_using_valid_id(self):
-        response = self.client.get('/posts/1/')
+        response = self.client.get('/posts/17/')
         self.assertEqual(response.data['title'], 'a title')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
@@ -49,13 +49,13 @@ class PostDetailViewTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
     def test_user_can_update_own_post(self):
-        self.client.login(username='andile', password='pass')
-        response = self.client.put('/posts/1/', {'title': 'a new title'})
+        self.client.login(username='love', password='pass')
+        response = self.client.put('/posts/17/', {'title': 'a new title'})
         post = Post.objects.filter(pk=1).first()
         self.assertEqual(post.title, 'a new title')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_user_cant_update_another_users_post(self):
-        self.client.login(username='andile', password='pass')
-        response = self.client.put('/posts/2/', {'title': 'a new title'})
+        self.client.login(username='love', password='pass')
+        response = self.client.put('/posts/19/', {'title': 'a new title'})
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
