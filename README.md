@@ -52,17 +52,25 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 
 ![how it works section](image-3.png)
 
+### Add post feature
+- A user can upload an image of choice to share their big day.
+- A user is able to create posts in order to share with others. Please see below:
 
+![add post](image-7.png)
 
-![Hero Image](readme.docs/hero-image.png)
+### The post page
+- Here users are able to view the most recent posts.
+- On this page, one  can view the most followed profiles.
+- Users are able to like other people's posts and comment on them.
+- Users are able to see our customers in action and see how the insurance had helped them with arranging their lobola and/ weddings. Please see below:
 
-![Logged in Navbar](readme.docs/navbar.png)
+![post page](image-8.png)
 
+#### Comment section
+- A user is able to comment on a post
+- They can also edit and delete their comment by clicking the Kebab Menu for the options. Please see below image:
 
-![Upload Image](readme.docs/image-upload.png)
-
-![List of posts](readme.docs/post-list.png)
-
+![comment section](image-9.png)
 
 ### Sign In Page
 * A user is then prompted to sign in if the have already been able to signup
