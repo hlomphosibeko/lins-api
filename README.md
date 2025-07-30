@@ -6,6 +6,19 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 
 ## Features Backend
 
+### Testing Backend
+#### Validator testing - Python test
+- The settings page had lines that were too long to pass the test. Please see below:
+
+![long lines](image-11.png)
+
+- After fixing them, the CI Python Linter test passed. Please see below:
+
+![fixed lines](image-12.png)
+
+
+
+
 ### Backend Deployement
 * Create a database
 * On settings in the Heroku app, add a Config Var DATABASE_URL and paste in the database URL
@@ -62,6 +75,7 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 - Here users are able to view the most recent posts.
 - On this page, one  can view the most followed profiles.
 - Users are able to like other people's posts and comment on them.
+- Users can also follow other profiles.
 - Users are able to see our customers in action and see how the insurance had helped them with arranging their lobola and/ weddings. Please see below:
 
 ![post page](image-8.png)
@@ -71,6 +85,11 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 - They can also edit and delete their comment by clicking the Kebab Menu for the options. Please see below image:
 
 ![comment section](image-9.png)
+
+### Profile page
+- The profile page shows the number of posts a user has and also the number of followers. Please see below:
+
+![profile page](image-10.png)
 
 ### Sign In Page
 * A user is then prompted to sign in if the have already been able to signup
@@ -84,13 +103,9 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 ![Sign Up page](readme.docs/signup.png)
 
 
-
-
 ### Features Left To Implement
-* When a user clicks on the "Get a Quote" button, they should be redirected to a Coverage plans page where they can select the type of plan they want to get for their ceremony.
-* The "Learn more" button should redirect a user to a page where they can learn more about the app.
+* Add buttons to the quote so that users can apply for the insurance.
 * Create terms and conditions regarding payouts
-* On the Home Page, I would like to add more details regarding the insurance I offer
 
 ## Testing
 
@@ -101,7 +116,13 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 
 
 ### Validator Testing
+- HTML:
+    * There appears to be errors on the index.html file.
+    * These errors are part of the package and cannot be changed. Please see below:
 
+    ![HTML validation](image-13.png)
+    
+- Javascript:
 
 
 ### Unfixed Bugs
