@@ -174,7 +174,12 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 
 ### Manual Testing Frontend
 * When a user tries to submit an empty signin/signup form, the form is defensive. Users have to complete all fields. Please see image below:
+
 ![Defensive Form](readme.docs/defensive-form.png)
+
+* When a user tries to like their own post, a pop message saying: "You can't like your own post!" appears. Please see below:
+
+![defensive like button](readme.docs/no-like-button.png)
 
 
 
@@ -185,7 +190,10 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 
     ![HTML validation](readme.docs/html-validation.png)
 
-- Javascript:
+- LIGHTHOUSE:
+    * <strong>Django REST Framework:</strong> The profile page is not showing the HTML form, meaning that it is not allowing users to create profiles. Please see results below:
+
+    ![lighthouse issue](readme.docs/lighthouse-issue.png)
 
 
 ### Unfixed Bugs
@@ -193,6 +201,9 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 * When I access the app, before I signin or click any button I get the below errors on dev tools. The default profile image is not readable. Please see image below:
 
 ![Dev Tools](readme.docs/console.png)
+
+* <strong>Django REST Framework:</strong> The profile page is not showing the HTML form, meaning that it is not allowing users to create profiles even when authenticated.
+
 
 ## User Stories 
 ##### Fulfilled User Stories
@@ -230,6 +241,7 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 * Oisin, a Tutor of CI, helped me with getting my workspaces set up as I was struggling with the commands given to set it up.
 * The Moments Walkthrough helped me set up my workspaces and also with the content.
 * My Mentor helped with the fixes on my project and making sure the project is functioning as it should.
+* Roman, a tutor at CI, helped with the Avatar image as it was not appearing. 
 * I wanted a reminder on how to create handleClick, I got help from [Stackoverflow](https://stackoverflow.com/questions/75640164/react-router-to-redirect-new-page-using-a-button-onclick/75640182)
 
 
