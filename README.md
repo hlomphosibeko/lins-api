@@ -2,35 +2,85 @@
 
 Lobola is traditional Southern African custom in which a man pays a bride price--usually in the form of cattle or money--to the family of the woman he wishes to marry. It is practiced in several cultures. This site hopes to help many people from going into debt or borrowing money to pay lobola. Insurance helps reduce the financial risk and provides peace of mind during a culturally important but expensive process. The site is mainly targeting people who wish to marry and yet can't afford. The site does not only offer insurance, but also a platform where members can share content of their Lobola events, other members can read, and comment on the content shared. This insurance app is not only targeted at South Africans, but the world as it keeps diversing. There are people who go into multiracial marriages, due to traveling a lot. So when people learn about customs and cultures of South Africa, then they will find this insurance app useful.
 
-![hero home page](image.png)
+![hero home page](readme.docs/hero-home-page.png)
 
-## Features Backend
+## Features Backend - Django REST Framework
+### Root Route
+- When a user is not logged in, the root route page appears showing a welcome message. Please see below:
 
-### API
-- 
+![dj framework root](readme.docs/dj-framework-root.png)
 
-![api profile page](image-16.png)
+### Profile List
+- This page shows the list of profiles created
+- Anyone can view this part of page. No login required
+- At this stage, no user can temper with the profiles created. Please see below:
+
+![api profile list](readme.docs/api-profile-list.png)
+
+### Post List
+- This page shows the number of posts posted by the users. Please see below:
+
+![api post list](readme.docs/api-post-list.png)
+
+- Happy, a logged in user, can create a post using the form provided
+- They can choose an image they would like to post, however the images should fit the required criteria of 2MB
+- If the image is large, a 403 error message will appear but that will not break the site
+- Please see image below:
+
+![loggedin post](readme.docs/loggedin-post.png)
+
+### Comment List
+- This page shows the number of comments and also shows the comments given
+- Also, unauthorised users cannot comment on posts. Please see below:
+
+![comment list](readme.docs/comment-list.png)
+
+- A logged in user is able to select a post they would like to comment in
+- The below HTML form allows the user to write what they have in mind about the post. Please see below:
+
+![loggedin comment](readme.docs/loggedin-comment.png)
+
+### Follower List
+- This page shows the number of followers on the users list. Please see below:
+
+![follower list](readme.docs/follower-list.png)
+
+- An authenticated user is able to click on the dropdown button on the form to select a user they would like to follow. Please see below:
+
+![loggedin follower](readme.docs/loggedin-follower.png)
+
+### Like List
+- This page reflects the number of likes each post received. Please see below:
+
+![like list](readme.docs/like-list.png)
+
+- When a user is logged in, they are able to like other users posts.
+- At the bottom of the page, there is a form where an authenticated user can click on the dropdown button to choose a post to like
+- Users cannot like their own posts. Please see image below:
+
+![loggedin like](readme.docs/loggedin-like.png)
+
 
 ### Testing Backend
 #### Validator testing - Python test
 - The settings page had lines that were too long to pass the test. Please see below:
 
-![long lines](image-11.png)
+![long lines](readme.docs/long-lines-error.png)
 
 - After fixing them, the CI Python Linter test passed. Please see below:
 
-![fixed lines](image-12.png)
+![fixed lines](readme.docs/fixed-lines.png)
 
 #### Python testing
 - I ran tests to see if the functionality of the creating post is okay.
 - The test to see if logged in users can create a post failed.
 - The test to see if not logged in users cant create a post failed. Please see below:
 
-![failed posts tests](image-15.png)
+![failed posts tests](readme.docs/failed-posts-test.png)
 
 - Here I tested the functionality of creating posts.
 
-![post tests](image-14.png)
+![post tests](readme.docs/passed-posts-tests.png)
 
 ### Backend Deployement
 * Create a database
@@ -51,38 +101,38 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 - When a user is not yet logged in, the below is what the navigation bar looks like.
 - It consists of a logo (a cow's head with Lobola Insurance written on it on a white background)
 
-![navbar !loggedin](image-1.png)
+![navbar !loggedin](readme.docs/navbar-!loggedin.png)
 
 - When a user is signed in, the navigation bar shows more links/ pages. Please see below:
 
-![navbar loggedin](image-6.png)
+![navbar loggedin](readme.docs/navbar-loggedin.png)
 
 ### The home page
 - This includes a photograph of for men (uncles) negotiating the price for the Lobola
 - On the the image is a text overlay which attracts the user to browse through the site
 - Below the text are two buttons, one to get a quote of the insurance offered, and the other is to learn more about the site. Please see image below:
 
-![hero image](image-2.png)
+![hero image](readme.docs/hero-image.png)
 
 - When a user clicks the 'Get a Quote' button, they are able to view the quotes we offer. Please see below:
 
-![quote](image-4.png)
+![quote](readme.docs/quote.png)
 
 - The 'Learn More' button shows more information about the insurance site. Please see below:
 
-![learn more](image-5.png)
+![learn more](readme.docs/learn-more.png)
 
 #### How it works section
 - Below the landing image is a section that tells user what the insurance offeres
 - It is just a brief explanation of what is included. Please see below:
 
-![how it works section](image-3.png)
+![how it works section](readme.docs/how-it-works.png)
 
 ### Add post feature
 - A user can upload an image of choice to share their big day.
 - A user is able to create posts in order to share with others. Please see below:
 
-![add post](image-7.png)
+![add post](readme.docs/add-post.png)
 
 ### The post page
 - Here users are able to view the most recent posts.
@@ -91,18 +141,18 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 - Users can also follow other profiles.
 - Users are able to see our customers in action and see how the insurance had helped them with arranging their lobola and/ weddings. Please see below:
 
-![post page](image-8.png)
+![post page](readme.docs/post-page.png)
 
 #### Comment section
 - A user is able to comment on a post
 - They can also edit and delete their comment by clicking the Kebab Menu for the options. Please see below image:
 
-![comment section](image-9.png)
+![comment section](readme.docs/comment-section.png)
 
 ### Profile page
 - The profile page shows the number of posts a user has and also the number of followers. Please see below:
 
-![profile page](image-10.png)
+![profile page](readme.docs/profile-page.png)
 
 ### Sign In Page
 * A user is then prompted to sign in if the have already been able to signup
@@ -133,7 +183,7 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
     * There appears to be errors on the index.html file.
     * These errors are part of the package and cannot be changed. Please see below:
 
-    ![HTML validation](image-13.png)
+    ![HTML validation](readme.docs/html-validation.png)
 
 - Javascript:
 
