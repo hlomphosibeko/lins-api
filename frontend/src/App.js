@@ -17,6 +17,7 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import HomePage from './components/HomePage';
 import GetAQuote from "./pages/quotes/GetAQuote";
 import LearnMore from './pages/quotes/LearnMore';
+import NotFound from './components/NotFound';
 
 
 function App() {
@@ -64,7 +65,7 @@ function App() {
           />
           <Route path="/quotes" render={() => <GetAQuote />} />
           <Route path="/more" render={() => <LearnMore />} />
-          <Route render={() => <p>Page not found!</p>} /> 
+          <Route render={() => <NotFound />} /> 
         </Switch>
       </Container>
     </div>

@@ -1,9 +1,15 @@
 import React from 'react'
 import NoResults from "../assets/no-results.png"
+import styles from "../styles/NotFound.module.css"
+import Asset from './Asset'
 
 const NotFound = () => {
   return (
-    <div>NotFound</div>
+    <div className={styles.Nofind}>
+        <Asset
+            src={NoResults}
+            message="Sorry, the page you're looking for does not exist" />
+    </div>
   )
 }
 
