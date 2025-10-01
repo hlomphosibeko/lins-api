@@ -43,8 +43,8 @@ if 'DEV' not in os.environ:
         'rest_framework.renderers.JSONRenderer',
     ]
 
-# REST_USE_JWT = True
-# JWT_AUTH_SECURE = True
+REST_USE_JWT = True
+JWT_AUTH_SECURE = True
 JWT_AUTH_COOKIE = 'my-app-auth'
 JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 JWT_AUTH_SAMESITE = 'None'
@@ -66,7 +66,7 @@ DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'https://lins-api-d9f3116aea51.herokuapp.com/'
+    'lins-api-d9f3116aea51.herokuapp.com',
 ]
 
 # Application definition
@@ -112,10 +112,11 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     origin for origin in [
-        os.environ.get('CLIENT_ORIGIN'),
-        os.environ.get('CLIENT_ORIGIN_DEV')
+        os.environ.get('CLIENT_ORIGIN', ''),
+        os.environ.get('CLIENT_ORIGIN_DEV', ''),
     ] if origin
 ]
+print("CORS_ALLOWED_ORIGINS:", CORS_ALLOWED_ORIGINS)
 
 CORS_ALLOW_CREDENTIALS = True
 
