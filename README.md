@@ -83,8 +83,52 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 ![post tests](readme.docs/passed-posts-tests.png)
 
 ### Backend Deployement
-* Create a PostgreSQL database instance
-* On settings in the Heroku app, add a Config Var DATABASE_URL and paste in the database URL
+1. Navigate to PostgreSQL from Code Institute. Enter email address and click submit:
+
+![PostgreSQL](image-5.png)
+
+2. Database is successfully created. Please *review the email* sent to your student email inbox:
+
+![success email](image-6.png)
+
+3. Log into Heroku and go to the *Dashboard*:
+
+![dasboard](image.png)
+
+4. Click the "New" button:
+
+![new-button](image-1.png)
+
+5. Click "Create new app":
+
+![new-app](image-2.png)
+
+6. Give the app a name and select region. Then click "Create App" to confirm:
+
+![create-app](image-3.png)
+
+7. Open the *Settings* tab:
+
+![settings-tab](image-4.png)
+
+8. Scroll down to Config Vars section. Click on the "Reveal Config Vars" button. Add a Config Var key *DATABASE_URL* and value of the database created from PostgreSQL:
+
+![config vars](image-7.png)
+
+9. On VSCode, update the *DATABASES* on the settings.py file:
+
+![databases-settings](image-8.png)
+
+10. On the terminal, migrate database models to new database:
+
+![migrations](image-9.png)
+
+11. Create a superuser for new database:
+
+![superuser](image-10.png)
+
+
+
 * On VSCode, set up my project to connect to my PostgreSQL from Code Institute database, create my database tables by running migrations
 * Confirm functionality by creating a superuser
 * In the settings file, update the value of ALLOWED_HOSTS variable to include Heroku app's URL
