@@ -127,15 +127,21 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 
 ![superuser](image-10.png)
 
+12. Create a Procfile file that will provide the commands to Heroku to build and run the project:
 
+![Procfile](image-11.png)
 
-* On VSCode, set up my project to connect to my PostgreSQL from Code Institute database, create my database tables by running migrations
-* Confirm functionality by creating a superuser
-* In the settings file, update the value of ALLOWED_HOSTS variable to include Heroku app's URL
-* Create a Procfile file that will provide the commands to Heroku to build and run the project
-* On Heroku settings, added two more Config Vars: CLOUDINARY_URL and SECRET_KEY
-* Connect Heroku to GitHub
-* Deploy project.
+13. On Heroku settings, added two more Config Vars: CLOUDINARY_URL and SECRET_KEY:
+
+![last-config](image-12.png)
+
+14. Open the *Deploy* tab. Scroll down to *Deployment* method section, select *Connect to GitHub*:
+
+![connect-github](image-13.png)
+
+15. When all changes have been pushed to GitHub, use *Manual deploy* section and click *Deploy Branch*. Project will be deployed:
+
+![deployed](image-14.png)
 
 
 ## Features Frontend
