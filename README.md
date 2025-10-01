@@ -83,12 +83,11 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 ![post tests](readme.docs/passed-posts-tests.png)
 
 ### Backend Deployement
-* Create a database
+* Create a PostgreSQL database instance
 * On settings in the Heroku app, add a Config Var DATABASE_URL and paste in the database URL
-* Set up my project to connect to my PostgreSQL from Code Institute database
-* Create a superuser
-* Install package needed to run the project on Heroku
-* Fix a few environment variables
+* On VSCode, set up my project to connect to my PostgreSQL from Code Institute database, create my database tables by running migrations
+* Confirm functionality by creating a superuser
+* In the settings file, update the value of ALLOWED_HOSTS variable to include Heroku app's URL
 * Create a Procfile file that will provide the commands to Heroku to build and run the project
 * On Heroku settings, added two more Config Vars: CLOUDINARY_URL and SECRET_KEY
 * Connect Heroku to GitHub
