@@ -1,10 +1,12 @@
 # Lobola Insurance
-
+## Objective
 Lobola is traditional Southern African custom in which a man pays a bride price--usually in the form of cattle or money--to the family of the woman he wishes to marry. It is practiced in several cultures. This site hopes to help many people from going into debt or borrowing money to pay lobola. Insurance helps reduce the financial risk and provides peace of mind during a culturally important but expensive process. The site is mainly targeting people who wish to marry and yet can't afford. The site does not only offer insurance, but also a platform where members can share content of their Lobola events, other members can read, and comment on the content shared. This insurance app is not only targeted at South Africans, but the world as it keeps diversing. There are people who go into multiracial marriages, due to traveling a lot. So when people learn about customs and cultures of South Africa, then they will find this insurance app useful.
 
 ![hero home page](readme.docs/hero-home-page.png)
 
 ## Features Backend - Django REST Framework
+
+I created an Application Programming Interface (API) using Django REST Framework which allows users to store and manipulate data records, to register and log in to the application without issues.
 
 ### Root Route
 - When a user is not logged in, the root route page appears showing a welcome message. Please see below:
@@ -73,76 +75,149 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 ![fixed lines](readme.docs/fixed-lines.png)
 
 #### Python testing
-- I ran tests to see if the functionality of the creating post is okay.
-- The test to see if logged in users can create a post failed.
-- The test to see if not logged in users cant create a post failed. Please see below:
+#### Post Views
+A.  
+- I tested if the Posts can be listed. 
+- The first test failed due to incorrect status code. Please see below:
 
-![failed posts tests](readme.docs/failed-posts-test.png)
+![post-can-list-fail](readme.docs/post-can-list-fail.png)
 
-- Here I tested the functionality of creating posts.
+A.1 
+- After fixing the status code from 201 to HTTP_200_OK, the test passed. Please see below:
 
-![post tests](readme.docs/passed-posts-tests.png)
+![post-can-list-pass](readme.docs/post-can-list-pass.png)
+
+
+B. 
+- I tested to see if logged in users can create a post. 
+- The test failed due to the post not being created, so the database stays empty. Please see below failed test:
+
+![loggedin-create-post-fail](readme.docs/loggedin-create-post-fail.png)
+
+
+C. 
+- I tested to see if user is not logged in they can't create a post.
+- The first test failed to incorrect status code.
+- The test expected status code HTTP_401_UNAUTHOIZED, instead found 200_OK which was not correct.
+- Please see below snippet:
+
+![!login-!create-post-fail](readme.docs/!login-!create-post-fail.png)
+
+C.1 
+- I changed the status code according the AssertionError results.
+- The test passed. Please see below:
+
+![!login-!create-post-pass](readme.docs/!login-!create-post-pass.png )
+
+
+D. 
+- I tested if posts can be retrieved using valid id.
+- The test failed because of an incorrect status code. Please see below:
+
+![retrieve-valid-id-fail](readme.docs/retrieve-valid-id-fail.png)
+
+D.1 
+- After making the necessary change with the status code, the test passed. Please see below:
+
+![retrieve-valid-id-pass](readme.docs/retrieve-valid-id-pass.png)
+
+
+E. 
+- I tested if posts can't be retrieved using invalid id.
+- The test failed due to incorrect status code. Please see below:
+
+![!retrieve-invalid-id-fail](readme.docs/!retrieve-invalid-id-fail.png)
+
+E.1 
+- The test passed when I fixed the status code. Please see below:
+
+![!retrieve-invalid-id-pass](readme.docs/!retrieve-invalid-id-pass.png)
+
+
+F. 
+- I did a test to see if users can update their own posts.
+- The test failed due to incorrect status code.
+- The test also had an error stating that there is no 'title' object and yet there is.
+- The test failed to find or update the post in the database. Please see below:
+
+![update-own-post-fail](readme.docs/update-own-post-fail.png)
+
+
+G. 
+- I tested to see if user cannot update another user's post.
+- The test failed at the beginning due to incorrect status code. Please see below:
+
+![!update-other-post-fail](readme.docs/!update-other-post-fail.png)
+
+G.1 
+- After fixing the status code, the test finally passed. Please see below:
+
+![!update-other-post-pass](readme.docs/!update-other-post-pass.png)
+
+
+In total, I managed to test 7 functions. Out of the 7 only 6 have passed. 
+
 
 ### Backend Deployement
 1. Navigate to PostgreSQL from Code Institute. Enter email address and click submit:
 
-![PostgreSQL](image-5.png)
+![PostgreSQL](readme.docs/postgresql.png)
 
 2. Database is successfully created. Please *review the email* sent to your student email inbox:
 
-![success email](image-6.png)
+![success email](readme.docs/success-email.png)
 
 3. Log into Heroku and go to the *Dashboard*:
 
-![dasboard](image.png)
+![dasboard](readme.docs/dashboard.png)
 
 4. Click the "New" button:
 
-![new-button](image-1.png)
+![new-button](readme.docs/new-button.png)
 
 5. Click "Create new app":
 
-![new-app](image-2.png)
+![new-app](readme.docs/new-app.png)
 
 6. Give the app a name and select region. Then click "Create App" to confirm:
 
-![create-app](image-3.png)
+![create-app](readme.docs/create-app.png)
 
 7. Open the *Settings* tab:
 
-![settings-tab](image-4.png)
+![settings-tab](readme.docs/settings-tab.png)
 
 8. Scroll down to Config Vars section. Click on the "Reveal Config Vars" button. Add a Config Var key *DATABASE_URL* and value of the database created from PostgreSQL:
 
-![config vars](image-7.png)
+![config vars](readme.docs/config-vars.png)
 
 9. On VSCode, update the *DATABASES* on the settings.py file:
 
-![databases-settings](image-8.png)
+![databases-settings](readme.docs/database-sett.png)
 
 10. On the terminal, migrate database models to new database:
 
-![migrations](image-9.png)
+![migrations](readme.docs/migrations.png)
 
 11. Create a superuser for new database:
 
-![superuser](image-10.png)
+![superuser](readme.docs/superuser.png)
 
 12. Create a Procfile file that will provide the commands to Heroku to build and run the project:
 
-![Procfile](image-11.png)
+![Procfile](readme.docs/procfile.png)
 
 13. On Heroku settings, added two more Config Vars: CLOUDINARY_URL and SECRET_KEY:
 
-![last-config](image-12.png)
+![last-config](readme.docs/last-config.png)
 
 14. Open the *Deploy* tab. Scroll down to *Deployment* method section, select *Connect to GitHub*:
 
-![connect-github](image-13.png)
+![connect-github](readme.docs/connect-gh.png)
 
 15. When all changes have been pushed to GitHub, use *Manual deploy* section and click *Deploy Branch*. Project will be deployed:
 
-![deployed](image-14.png)
+![deployed](readme.docs/deployed.png)
 
 
 ## Features Frontend
