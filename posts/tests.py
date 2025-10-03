@@ -28,21 +28,21 @@ class PostListViewTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
 
-# class PostDetailViewTests(APITestCase):
-#     def setUp(self):
-#         andile = User.objects.create_user(username='andile', password='pass')
-#         banele = User.objects.create_user(username='banele', password='pass')
-#         Post.objects.create(
-#             owner=andile, title='a title', content='andiles content'
-#         )
-#         Post.objects.create(
-#             owner=banele, title='another title', content='baneles content'
-#         )
+class PostDetailViewTests(APITestCase):
+    def setUp(self):
+        choco = User.objects.create_user(username='choco', password='pass')
+        patient = User.objects.create_user(username='patient', password='pass')
+        Post.objects.create(
+            owner=choco, title='a title', content='chocos content'
+        )
+        Post.objects.create(
+            owner=patient, title='another title', content='patients content'
+        )
 
-    # def test_can_retrieve_post_using_valid_id(self):
-    #     response = self.client.get('/posts/1/')
-    #     self.assertEqual(response.data['title'], 'a title')
-    #     self.assertEqual(response.status_code, status.HTTP_200_OK)
+    def test_can_retrieve_post_using_valid_id(self):
+        response = self.client.get('/posts/1/')
+        self.assertEqual(response.data['title'], 'a title')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     # def test_cant_retrieve_post_using_invalid_id(self):
     #     response = self.client.get('/posts/999/')
