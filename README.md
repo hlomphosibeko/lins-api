@@ -5,6 +5,7 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 ![hero home page](readme.docs/hero-home-page.png)
 
 ## Features Backend - Django REST Framework
+
 ### Root Route
 - When a user is not logged in, the root route page appears showing a welcome message. Please see below:
 
