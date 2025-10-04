@@ -159,6 +159,7 @@ In total, I managed to test 7 functions. Out of the 7 only 6 have passed.
 
 
 ### Backend Deployement
+### PosgreSQL
 1. Navigate to PostgreSQL from Code Institute. Enter email address and click submit:
 
 ![PostgreSQL](readme.docs/postgresql.png)
@@ -167,6 +168,7 @@ In total, I managed to test 7 functions. Out of the 7 only 6 have passed.
 
 ![success email](readme.docs/success-email.png)
 
+### Heroku
 3. Log into Heroku and go to the *Dashboard*:
 
 ![dasboard](readme.docs/dashboard.png)
@@ -191,6 +193,7 @@ In total, I managed to test 7 functions. Out of the 7 only 6 have passed.
 
 ![config vars](readme.docs/config-vars.png)
 
+### IDE
 9. On VSCode, update the *DATABASES* on the settings.py file:
 
 ![databases-settings](readme.docs/database-sett.png)
@@ -207,6 +210,7 @@ In total, I managed to test 7 functions. Out of the 7 only 6 have passed.
 
 ![Procfile](readme.docs/procfile.png)
 
+### Heroku
 13. On Heroku settings, added two more Config Vars: CLOUDINARY_URL and SECRET_KEY:
 
 ![last-config](readme.docs/last-config.png)
@@ -219,6 +223,23 @@ In total, I managed to test 7 functions. Out of the 7 only 6 have passed.
 
 ![deployed](readme.docs/deployed.png)
 
+
+### Creating a new React app in an existing DRF workspace
+* How I started a React Project inside the *LINS* project:
+    - Inside the workspace, I created a directory called *frontend* in the terminal
+    ![frontend-folder](readme.docs/frontend-folder.png)
+    - From inside the frontend directory, I ran the following command to create a new React app and installed the working dependencies that will be needed
+    ![command](readme.docs/command.png)
+    -  I ran the command *npm start* in the terminal to test functionality
+    ![react-app-working](readme.docs/react-app-working.png)
+    - After determining my local development environment URL, I prepared the environmental variables
+    - I updated the settings.py page to with COR variables and ALLOWED_HOST
+    - I then prepared React to connect to the Django API by adding proxy url to the package.json file
+    ![proxy](readme.docs/proxy.png)
+    - As I am combining workspaces, I didn't need to add the BaseURL setting in the axiosDefaults.js file when creating. Reason being, the combined workspace received the JSON from API from same URL.
+    - When running the application, I needed to have both Django API and frontend directories running at the same time.
+    - First terminal would be the Django API directory, then the second one would be the frontend directory.
+    ![two-terminals](readme.docs/two-terminals.png)
 
 ## Features Frontend
 
@@ -360,7 +381,7 @@ In total, I managed to test 7 functions. Out of the 7 only 6 have passed.
 
 ## Credits
 
-### Content
+### Acknowledge
 * Sarah, a Tutor of CI, helped me with the sign out link. I could not sign out once signed in, and Sarah helped me find my way to fixing the issue.
 * I have issues with the URLS. A couple of tutors tried to help me position the URL's at the right places namely: Rebecca, Sarah, Roman
 * Oisin, a Tutor of CI, helped me with getting my workspaces set up as I was struggling with the commands given to set it up.
