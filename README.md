@@ -8,6 +8,10 @@ Lobola is traditional Southern African custom in which a man pays a bride price-
 
 I created an Application Programming Interface (API) using Django REST Framework which allows users to store and manipulate data records, to register and log in to the application without issues.
 
+- In the process of setting up Django, I created a repository on the GitHub App called *lins-api* and connected it to VSCode IDE where I set up a local folder called *lins-api*.
+- I started a .venv virtual environment with Python and installed Cloudinary to store my images.
+- Then started creating all required apps for the project.
+
 ### Root Route
 - When a user is not logged in, the root route page appears showing a welcome message. Please see below:
 
@@ -76,26 +80,26 @@ I created an Application Programming Interface (API) using Django REST Framework
 
 #### Python testing
 #### Post Views
-A.  
+<strong>A.</strong>  
 - I tested if the Posts can be listed. 
 - The first test failed due to incorrect status code. Please see below:
 
 ![post-can-list-fail](readme.docs/post-can-list-fail.png)
 
-A.1 
+<strong>A.1.</strong> 
 - After fixing the status code from 201 to HTTP_200_OK, the test passed. Please see below:
 
 ![post-can-list-pass](readme.docs/post-can-list-pass.png)
 
 
-B. 
+<strong>B.</strong>  
 - I tested to see if logged in users can create a post. 
 - The test failed due to the post not being created, so the database stays empty. Please see below failed test:
 
 ![loggedin-create-post-fail](readme.docs/loggedin-create-post-fail.png)
 
 
-C. 
+<strong>C.</strong>  
 - I tested to see if user is not logged in they can't create a post.
 - The first test failed to incorrect status code.
 - The test expected status code HTTP_401_UNAUTHOIZED, instead found 200_OK which was not correct.
@@ -103,38 +107,38 @@ C.
 
 ![!login-!create-post-fail](readme.docs/!login-!create-post-fail.png)
 
-C.1 
+<strong>C.1.</strong>  
 - I changed the status code according the AssertionError results.
 - The test passed. Please see below:
 
 ![!login-!create-post-pass](readme.docs/!login-!create-post-pass.png )
 
 
-D. 
+<strong>D.</strong>  
 - I tested if posts can be retrieved using valid id.
 - The test failed because of an incorrect status code. Please see below:
 
 ![retrieve-valid-id-fail](readme.docs/retrieve-valid-id-fail.png)
 
-D.1 
+<strong>D.1.</strong>  
 - After making the necessary change with the status code, the test passed. Please see below:
 
 ![retrieve-valid-id-pass](readme.docs/retrieve-valid-id-pass.png)
 
 
-E. 
+<strong>E</strong>  
 - I tested if posts can't be retrieved using invalid id.
 - The test failed due to incorrect status code. Please see below:
 
 ![!retrieve-invalid-id-fail](readme.docs/!retrieve-invalid-id-fail.png)
 
-E.1 
+<strong>E.1.</strong>  
 - The test passed when I fixed the status code. Please see below:
 
 ![!retrieve-invalid-id-pass](readme.docs/!retrieve-invalid-id-pass.png)
 
 
-F. 
+<strong>F.</strong>  
 - I did a test to see if users can update their own posts.
 - The test failed due to incorrect status code.
 - The test also had an error stating that there is no 'title' object and yet there is.
@@ -143,23 +147,23 @@ F.
 ![update-own-post-fail](readme.docs/update-own-post-fail.png)
 
 
-G. 
+<strong>G.</strong>  
 - I tested to see if user cannot update another user's post.
 - The test failed at the beginning due to incorrect status code. Please see below:
 
 ![!update-other-post-fail](readme.docs/!update-other-post-fail.png)
 
-G.1 
+<strong>G.1.</strong> 
 - After fixing the status code, the test finally passed. Please see below:
 
 ![!update-other-post-pass](readme.docs/!update-other-post-pass.png)
 
 
-In total, I managed to test 7 functions. Out of the 7 only 6 have passed. 
+In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 error detected. 
 
 
 ### Backend Deployement
-### PosgreSQL
+### PostgreSQL
 1. Navigate to PostgreSQL from Code Institute. Enter email address and click submit:
 
 ![PostgreSQL](readme.docs/postgresql.png)
@@ -224,9 +228,10 @@ In total, I managed to test 7 functions. Out of the 7 only 6 have passed.
 ![deployed](readme.docs/deployed.png)
 
 
-### Creating a new React app in an existing DRF workspace
+### Creating a new React app in an existing LINS workspace
 * How I started a React Project inside the *LINS* project:
     - Inside the workspace, I created a directory called *frontend* in the terminal
+
     ![frontend-folder](readme.docs/frontend-folder.png)
     - From inside the frontend directory, I ran the following command to create a new React app and installed the working dependencies that will be needed
     ![command](readme.docs/command.png)

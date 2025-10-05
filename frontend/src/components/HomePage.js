@@ -24,10 +24,9 @@ const HomePage = () => {
              src="https://res.cloudinary.com/dibjhrwcc/image/upload/v1747603650/hero-image_sf8q4b.png" 
              alt="Hero image" />
             <Card.ImgOverlay className='text-center text-white' md="auto">
-                <Card.Title className={styles.Title}>Insuring Tradition. Empowering Responsibility.</Card.Title>
+                <Card.Title className={styles.Title}>Lobolo Insurance</Card.Title>
                 <Card.Text className={styles.Text}>
-                    Your commitment deserves financial planning. 
-                    Our lobola insurance protects you and your family from unexpected costs while honoring cultural values.
+                    Before You Say 'I Do', Make Sure You're Covered Too
                 </Card.Text>
                 <br />
                 <Button

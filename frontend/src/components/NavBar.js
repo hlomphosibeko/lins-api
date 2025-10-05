@@ -50,12 +50,7 @@ const NavBar = () => {
         >
         <i className="fas fa-heart"></i>Liked
       </NavLink>
-      <NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to="/testimonial">
-        <i className="fas fa-stream"></i>Testimonial
-      </NavLink>
+      
       <NavLink
         className={styles.NavLink}
         to="/"
@@ -74,6 +69,12 @@ const NavBar = () => {
   const loggedOutIcons = (
     <>
       
+      <NavLink
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/testimonial">
+        <i className="fas fa-stream"></i>Testimonial
+      </NavLink>
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
