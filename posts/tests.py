@@ -17,7 +17,8 @@ class PostListViewTests(APITestCase):
         print(len(response.data))
 
     def test_logged_in_user_can_create_post(self):
-        self.client.login(username='choco', password='pass')
+        user = User.objects.get(username='choco')
+        self.client.force_authenticate(user=user)
         response = self.client.post('/posts/', {'title': 'a title'})
         count = Post.objects.count()
         self.assertEqual(count, 1)
@@ -31,12 +32,12 @@ class PostListViewTests(APITestCase):
 class PostDetailViewTests(APITestCase):
     def setUp(self):
         choco = User.objects.create_user(username='choco', password='pass')
-        patient = User.objects.create_user(username='patient', password='pass')
+        milky = User.objects.create_user(username='milky', password='pass')
         Post.objects.create(
             owner=choco, title='a title', content='chocos content'
         )
         Post.objects.create(
-            owner=patient, title='another title', content='patients content'
+            owner=milky, title='another title', content='milkys content'
         )
 
     def test_can_retrieve_post_using_valid_id(self):
@@ -49,13 +50,15 @@ class PostDetailViewTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
     def test_user_can_update_own_post(self):
-        self.client.login(username='choco', password='pass')
+        user = User.objects.get(username='choco')
+        self.client.force_authenticate(user=user)
         response = self.client.put('/posts/1/', {'title': 'a new title'})
         post = Post.objects.filter(pk=1).first()
         self.assertEqual(post.title, 'a new title')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_user_cant_update_another_users_post(self):
-        self.client.login(username='choco', password='pass')
+        user = User.objects.get(username='choco')
+        self.client.force_authenticate(user=user)
         response = self.client.put('/posts/2/', {'title': 'a new title'})
-        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)

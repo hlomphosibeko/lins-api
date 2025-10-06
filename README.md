@@ -98,6 +98,12 @@ I created an Application Programming Interface (API) using Django REST Framework
 
 ![loggedin-create-post-fail](readme.docs/loggedin-create-post-fail.png)
 
+<strong>B.1</strong>
+- The method I was using before to see if clients are able to log in, only works with session based authentication
+- After making the change, the test passed as seen below:
+
+![loggedin-create-post-pass](readme.docs/loggedin-create-post-pass.png)
+
 
 <strong>C.</strong>  
 - I tested to see if user is not logged in they can't create a post.
@@ -146,6 +152,10 @@ I created an Application Programming Interface (API) using Django REST Framework
 
 ![update-own-post-fail](readme.docs/update-own-post-fail.png)
 
+<strong>F.1.</strong>
+- After making the fixes, the test passed. Please see below:
+
+![update-own-post-pass](readme.docs/update-own-post-pass.png)
 
 <strong>G.</strong>  
 - I tested to see if user cannot update another user's post.
