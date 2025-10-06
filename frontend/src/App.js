@@ -18,7 +18,7 @@ import HomePage from './components/HomePage';
 import GetAQuote from "./pages/quotes/GetAQuote";
 import LearnMore from './pages/quotes/LearnMore';
 import NotFound from './components/NotFound';
-import QuoteForm from './components/QuoteForm';
+import Quote from './components/Quote';
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
       <Container className={styles.Main}>
         <Switch>
           <Route exact path="/" render={() => <HomePage />} />
-          <Route exact path="/quoters" renders={() => <QuoteForm />} />
+          <Route exact path="/quoters" render={() => <Quote />} />
           <Route exact path="/posts" render={() => (
             <PostsPage message="No results found. Adjust the search keyword." />
           )} />
