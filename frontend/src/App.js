@@ -15,10 +15,11 @@ import UsernameForm from './pages/profiles/UsernameForm';
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import HomePage from './components/HomePage';
-import GetAQuote from "./pages/quotes/GetAQuote";
+// import GetAQuote from "./pages/quotes/GetAQuote";
 import LearnMore from './pages/quotes/LearnMore';
 import NotFound from './components/NotFound';
-import Quote from './components/Quote';
+import Quote from './pages/quotes/Quote';
+import QuoteCreateForm from './pages/quotes/QuoteCreateForm';
 
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
       <Container className={styles.Main}>
         <Switch>
           <Route exact path="/" render={() => <HomePage />} />
-          <Route exact path="/quoters" render={() => <Quote />} />
+          <Route exact path="/quotes" render={() => <Quote />} />
+          <Route exact path="/quotes/create" render={() => <QuoteCreateForm />} />
           <Route exact path="/posts" render={() => (
             <PostsPage message="No results found. Adjust the search keyword." />
           )} />
@@ -65,7 +67,7 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
-          <Route path="/quotes" render={() => <GetAQuote />} />
+          {/* <Route path="/quotes" render={() => <GetAQuote />} /> */}
           <Route path="/more" render={() => <LearnMore />} />
           <Route render={() => <NotFound />} /> 
         </Switch>

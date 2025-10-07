@@ -383,7 +383,16 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 
 
 ## Deployement
-* I followed the Advanced Front End: Deployement of both applications instructions
+* I followed the Advanced Front End: Deployement of both applications instructions:
+    - Setting up WhiteNoise for static files by installing whitenoise
+    - Creating staticfiles to the directory
+    - Inside the settings.py register the staticfiles
+    - Update template directories
+    - On the Django Rest Framework urls I made changes to configure the route in order to allow my Lobolo Insurance website to be viewed.
+
+    ![url](image.png)
+
+    - Inside the axiosDefault.js I set the baseURL in order to be able to deploy
 * The guide assisted in deploying both my React front-end project and my Django API backend as both projects were combined in one workspace.
 * Setting up WhiteNoise for static files
 * Add route to serve the index template
@@ -404,6 +413,8 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 * My Mentor helped with the fixes on my project and making sure the project is functioning as it should.
 * Roman, a tutor at CI, helped with the Avatar image as it was not appearing. 
 * I wanted a reminder on how to create handleClick, I got help from [Stackoverflow](https://stackoverflow.com/questions/75640164/react-router-to-redirect-new-page-using-a-button-onclick/75640182)
+* Tom, a tutor at CI, helped with fixing the issues while testing the functionality of the posts.
+* Moritz, a mentor, helped with understanding how manual testing should be done.
 
 
 ### Media

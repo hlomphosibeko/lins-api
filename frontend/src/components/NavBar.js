@@ -24,6 +24,16 @@ const NavBar = () => {
       console.log(err);
     }
   };
+  
+  const createQuoteIcon = (
+    <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/quotes/create"
+      >
+      <i className="fas fa-folder-plus"></i>Create Quote
+    </NavLink>
+  )
 
   const addPostIcon = (
     <NavLink
@@ -36,6 +46,13 @@ const NavBar = () => {
   )
   const loggedInIcons = (
     <>
+      <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/quotes"
+      >
+      <i className="fas fa-plus-square"></i>Quotes
+    </NavLink>
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
@@ -69,6 +86,7 @@ const NavBar = () => {
   const loggedOutIcons = (
     <>
       
+      {createQuoteIcon}
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
@@ -95,6 +113,7 @@ const NavBar = () => {
   return (
     <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top">
       <Container>
+        
         <NavLink to="/">
           <Navbar.Brand>
             <img src={logo} alt="logo" height="45" />
@@ -114,6 +133,7 @@ const NavBar = () => {
               <i className="fas fa-home"></i>Home
             </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
+            
           </Nav>
         </Navbar.Collapse>
       </Container>

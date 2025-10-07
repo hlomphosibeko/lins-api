@@ -21,6 +21,14 @@ const Quote = (props) => {
         premiumPlan,
     } = props;
 
+    // const currentUser = useCurrentUser();
+    // const is_owner = currentUser?.username === owner;
+    const history = useHistory();
+
+
+    return (
+        <div>Quote</div>
+    )
 
 
 
@@ -28,9 +36,6 @@ const Quote = (props) => {
 
 
 
-
-
-    
 };
 
-export default Quote();
+export default Quote;
