@@ -342,7 +342,7 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 
 ![defensive like button](readme.docs/no-like-button.png)
 
-* In the process of the developing this website/app, I manually tested features that users will use:
+* In the process of developing this website/app, I manually tested features that users will use:
 
 ![List of manual tests](manual_testing.md)
 

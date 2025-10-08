@@ -60,7 +60,7 @@ function QuoteCreateForm() {
         personality,
         spirituality,
         innocence,
-       // premiumPlan
+        premiumPlan
     } 
 
         console.log(quoteData)
@@ -94,10 +94,11 @@ function QuoteCreateForm() {
         formData.append("personality", personality);
         formData.append("spirituality", spirituality);
         formData.append("innocence", innocence);
-        // formData.append("premiumPlan", premiumPlan);
+        formData.append("premiumPlan", premiumPlan);
          console.log(formData)
         try {
           const { data } = await axiosReq.post("/quotes/", formData);
+          console.log("Quote created:", data);
           history.push(`/quotes/${data.id}`);
         } catch (err) {
           console.log(err);
