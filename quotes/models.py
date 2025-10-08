@@ -3,8 +3,11 @@ from django.contrib.auth.models import User
 
 
 class Quote(models.Model):
+    """
+    Quote model is used to create insurance quotes.
+    """
     owner = models.ForeignKey(
-        User, on_delete=models.CASCADE, null=True, blank=True)
+        User, on_delete=models.CASCADE)
     numKids = models.IntegerField(default=1)
     numMarried = models.IntegerField(default=1)
     tertiaryEducation = models.IntegerField(default=1)
