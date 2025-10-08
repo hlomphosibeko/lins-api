@@ -342,6 +342,9 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 
 ![defensive like button](readme.docs/no-like-button.png)
 
+* In the process of the developing this website/app, I manually tested features that users will use:
+
+![List of manual tests](manual_testing.md)
 
 
 ### Validator Testing
@@ -393,9 +396,7 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
     ![url](image.png)
 
     - Inside the axiosDefault.js I set the baseURL in order to be able to deploy
-* The guide assisted in deploying both my React front-end project and my Django API backend as both projects were combined in one workspace.
-* Setting up WhiteNoise for static files
-* Add route to serve the index template
+
 * Combining both Django and React static files and compiling them
 * Add runtime.txt file to ensure Heroku uses the correct version of Python to deploy my project
 * Test functionality of the URL
@@ -415,12 +416,15 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 * I wanted a reminder on how to create handleClick, I got help from [Stackoverflow](https://stackoverflow.com/questions/75640164/react-router-to-redirect-new-page-using-a-button-onclick/75640182)
 * Tom, a tutor at CI, helped with fixing the issues while testing the functionality of the posts.
 * Moritz, a mentor, helped with understanding how manual testing should be done.
+* Manual testing structure that my Mentor advised me to check, I got from this site [Cushione](https://github.com/Cushione/fantastic-news/blob/main/manual_testing.md)
+* LanaD, an alumni, tested my the functionality of my project and sent feedback.
 
 
 ### Media
 * The images used on this app are taken from various sites: ChatGPT, [Pixabay](https://pixabay.com/images/search/cow%20with%20rings%20%20logo/)
 * The logo image used is taken from [ChatGPT](https://chatgpt.com/s/m_6821d556cde88191b13fd8483534c194)
 * Some of the images were created with ChatGPT to suite the insurance site.
+* I used this site to create Manual testing [Tables Generator](https://www.tablesgenerator.com/markdown_tables)
 
 
 

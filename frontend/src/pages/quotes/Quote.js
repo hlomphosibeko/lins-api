@@ -9,6 +9,7 @@ import { MoreDropdown } from "../../components/MoreDropdown";
 
 const Quote = (props) => {
     const {
+        age,
         numKids,
         numMarried,
         tertiaryEducation,
@@ -25,10 +26,12 @@ const Quote = (props) => {
     // const is_owner = currentUser?.username === owner;
     const history = useHistory();
 
-
-    return (
-        <div>Quote</div>
-    )
+    
+    // return (<>
+    //     <div>Quote</div>
+    //     <div>{quoter()}</div>
+    //     </>
+    // )
 
 
 
