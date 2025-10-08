@@ -171,6 +171,9 @@ I created an Application Programming Interface (API) using Django REST Framework
 
 In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 error detected. 
 
+#### Manual Testing
+* In the process of developing the backend project, I manually tested features that users will use:
+[List of manual tests - BACKEND](manual_testing_back.md)
 
 ### Backend Deployement
 ### PostgreSQL
@@ -344,7 +347,7 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 
 * In the process of developing this website/app, I manually tested features that users will use:
 
-![List of manual tests](manual_testing.md)
+![List of manual tests](manual_testing_front.md)
 
 
 ### Validator Testing
