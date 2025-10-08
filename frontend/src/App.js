@@ -19,6 +19,7 @@ import HomePage from './components/HomePage';
 import LearnMore from './pages/quotes/LearnMore';
 import NotFound from './components/NotFound';
 import Quote from './pages/quotes/Quote';
+import QuotePage from './pages/quotes/QuotePage';
 import QuoteCreateForm from './pages/quotes/QuoteCreateForm';
 
 
@@ -33,6 +34,7 @@ function App() {
         <Switch>
           <Route exact path="/" render={() => <HomePage />} />
           <Route exact path="/quotes" render={() => <Quote />} />
+          {/* <Route exact path="/quotes/:id" render={() => <QuotePage />} /> */}
           <Route exact path="/quotes/create" render={() => <QuoteCreateForm />} />
           <Route exact path="/posts" render={() => (
             <PostsPage message="No results found. Adjust the search keyword." />
