@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -20,7 +20,7 @@ import Alert from "react-bootstrap/Alert";
 import { useRedirect } from "../../hooks/useRedirect";
 
 
-function QuoteCreateForm() {
+function QuoteCreateForm(props) {
     // useRedirect("loggedOut");
     const [errors, setErrors] = useState({});
     const history = useHistory();
@@ -37,6 +37,23 @@ function QuoteCreateForm() {
     const [innocence,setInnocence]=useState('');
     const [premiumPlan,setPremiumPlan]=useState('1');
 
+
+     const quoter = parseFloat((1/parseInt(innocence)*(500/(1+parseInt(age))+500/(1+parseInt(numKids))+500/(1+parseInt(numMarried))+500*parseInt(tertiaryEducation)
+                            +500*parseInt(cooker)+500*parseInt(neat)+500*parseInt(steadyIncome)+500*parseInt(personality)+500*parseInt(spirituality)))/12).toFixed(2);
+    
+    //  const handlePremiumChange = (e) => {
+       useEffect(() => {
+
+            setPremiumPlan(quoter)
+        }, [])
+        
+
+        // parseFloat((1/parseInt(innocence)*(500/(1+parseInt(age))+500/(1+parseInt(numKids))+500/(1+parseInt(numMarried))+500*parseInt(tertiaryEducation)
+        //                         +500*parseInt(cooker)+500*parseInt(neat)+500*parseInt(steadyIncome)+500*parseInt(personality)+500*parseInt(spirituality)))/12).toFixed(2)
+        // )
+    // }
+        // console.log(premiumPlan)
+
     const quoteData = {
         age,
         numKids,
@@ -51,13 +68,14 @@ function QuoteCreateForm() {
         premiumPlan
     } 
 
+    // console.log(premiumPlan)
         
 
-    const quoter = () => {
-        const quota = parseFloat((1/parseInt(premiumPlan)*1/parseInt(innocence)*(500/(1+parseInt(age))+500/(1+parseInt(numKids))+500/(1+parseInt(numMarried))+500*parseInt(tertiaryEducation)
-                            +500*parseInt(cooker)+500*parseInt(neat)+500*parseInt(steadyIncome)+500*parseInt(personality)+500*parseInt(spirituality)))/12).toFixed(2)
-        return quota
-    }
+    // const quoter = () => {
+    //     const quota = parseFloat((1/parseInt(premiumPlan)*1/parseInt(innocence)*(500/(1+parseInt(age))+500/(1+parseInt(numKids))+500/(1+parseInt(numMarried))+500*parseInt(tertiaryEducation)
+    //                         +500*parseInt(cooker)+500*parseInt(neat)+500*parseInt(steadyIncome)+500*parseInt(personality)+500*parseInt(spirituality)))/12).toFixed(2)
+    //     return quota
+    // }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -341,7 +359,20 @@ function QuoteCreateForm() {
         </Alert>
       ))}
             
-            <div>{quoter()}</div>
+            {/* <div>{premiumPlan}</div> */}
+            <Form>
+      <Row>
+        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+          <Container
+            className={`${styles.Container} d-flex flex-column justify-content-center`}
+          >
+                        <div>{premiumPlan}</div>
+
+          </Container>
+        </Col>
+        
+      </Row>
+    </Form>
 
        
         <Button
@@ -352,7 +383,7 @@ function QuoteCreateForm() {
             </Button>
             <Button
              className={`${btnStyles.Button} ${btnStyles.Brown}`}
-             onClick={() => {}}
+            //  onClick={() => {handlePremiumChange()}}
              type="submit">
                 create
             </Button>
