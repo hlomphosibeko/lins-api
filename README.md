@@ -1,10 +1,71 @@
 # Lobola Insurance
-## Objective
+# Objective
 Lobola is traditional Southern African custom in which a man pays a bride price--usually in the form of cattle or money--to the family of the woman he wishes to marry. It is practiced in several cultures. This site hopes to help many people from going into debt or borrowing money to pay lobola. Insurance helps reduce the financial risk and provides peace of mind during a culturally important but expensive process. The site is mainly targeting people who wish to marry and yet can't afford. The site does not only offer insurance, but also a platform where members can share content of their Lobola events, other members can read, and comment on the content shared. This insurance app is not only targeted at South Africans, but the world as it keeps diversing. There are people who go into multiracial marriages, due to traveling a lot. So when people learn about customs and cultures of South Africa, then they will find this insurance app useful.
 
 ![hero home page](readme.docs/hero-home-page.png)
 
-## Features Backend - Django REST Framework
+# Contents
+* [Wireframes](#wireframes)
+* [Features Backend - Django REST Framework](#features-backend---django-rest-framework)
+    * [Root Route](#root-route)
+    * [Profile List](#profile-list)
+    * [Post List](#post-list)
+    * [Comment List](#comment-list)
+    * [Follower List](#follower-list)
+    * [Like List](#like-list)
+    * [Quote List](#quote-list)
+* [Testing Backend](#testing-backend)
+    * [Validator testing 1](#validator-testing-1)
+    * [Python testing](#python-testing)
+        * [Post Views](#post-views)
+    * [Manual Testing - backend](#manual-testing---backend)
+* [Backend Deployement](#backend-deployement)
+    * [PostgreSQL](#postgresql)
+    * [Heroku 1](#heroku-1)
+    * [IDE](#ide)
+    * [Heroku 2](#heroku-2)
+* [Creating a new React app in an existing LINS workspace](#creating-a-new-react-app-in-an-existing-lins-workspace)
+* [Features Frontend](#features-frontend)
+    * [Navigation Bar](#navigation-bar)
+    * [The home page](#the-home-page)
+        * [How it works section](#how-it-works-section)
+    * [Add post feature](#add-post-feature)
+    * [The post page](#the-post-page)
+        * [Comment section](#comment-section)
+    * [Profile page](#profile-page)
+    * [Sign In Page](#sign-in-page)
+    * [Sign Up Page](#sign-up-page)
+    * [Quotes Page](#quotes-page)
+* [Features Left To Implement](#features-left-to-implement)
+* [Testing Frontend](#testing-frontend)
+    * [Manual Testing Frontend](#manual-testing-frontend)
+    * [Validator Testing 2](#validator-testing-2)
+* [Unfixed Bugs](#unfixed-bugs)
+* [User Stories](#user-stories)
+    * [Fulfilled User Stories](#fulfilled-user-stories)
+    * [Unfulfilled User Story](#unfulfilled-user-story)
+* [Deployement - Frontend](#deployement---frontend)
+* [Credits](#credits)
+    * [Acknowledge](#acknowledge)
+    * [Media](#media)
+
+
+# Wireframes
+- I planned my project first on Balsamiq, the structure of the pages
+- On a piece of paper I then planned the models to see how they will connect. Please see below images:
+
+[home-page](readme.docs/home-page.png)
+
+[liked-page](readme.docs/liked-page.png)
+
+[profile-page-wireframe](readme.docs/profile-page-wf.png)
+
+[quote-page](readme.docs/quote-page.png)
+
+[post-page-wireframe](readme.docs/post-page-wf.png)
+
+
+# Features Backend - Django REST Framework
 
 I created an Application Programming Interface (API) using Django REST Framework which allows users to store and manipulate data records, to register and log in to the application without issues.
 
@@ -12,19 +73,19 @@ I created an Application Programming Interface (API) using Django REST Framework
 - I started a .venv virtual environment with Python and installed Cloudinary to store my images.
 - Then started creating all required apps for the project.
 
-### Root Route
+## Root Route
 - When a user is not logged in, the root route page appears showing a welcome message. Please see below:
 
 ![dj framework root](readme.docs/dj-framework-root.png)
 
-### Profile List
+## Profile List
 - This page shows the list of profiles created
 - Anyone can view this part of page. No login required
 - At this stage, no user can temper with the profiles created. Please see below:
 
 ![api profile list](readme.docs/api-profile-list.png)
 
-### Post List
+## Post List
 - This page shows the number of posts posted by the users. Please see below:
 
 ![api post list](readme.docs/api-post-list.png)
@@ -36,7 +97,7 @@ I created an Application Programming Interface (API) using Django REST Framework
 
 ![loggedin post](readme.docs/loggedin-post.png)
 
-### Comment List
+## Comment List
 - This page shows the number of comments and also shows the comments given
 - Also, unauthorised users cannot comment on posts. Please see below:
 
@@ -47,7 +108,7 @@ I created an Application Programming Interface (API) using Django REST Framework
 
 ![loggedin comment](readme.docs/loggedin-comment.png)
 
-### Follower List
+## Follower List
 - This page shows the number of followers on the users list. Please see below:
 
 ![follower list](readme.docs/follower-list.png)
@@ -56,7 +117,7 @@ I created an Application Programming Interface (API) using Django REST Framework
 
 ![loggedin follower](readme.docs/loggedin-follower.png)
 
-### Like List
+## Like List
 - This page reflects the number of likes each post received. Please see below:
 
 ![like list](readme.docs/like-list.png)
@@ -67,9 +128,19 @@ I created an Application Programming Interface (API) using Django REST Framework
 
 ![loggedin like](readme.docs/loggedin-like.png)
 
+## Quote List
+- This page reflects a form to create quotes
+- It only takes intergers
 
-### Testing Backend
-#### Validator testing - Python test
+![quote-list](readme.docs/quote-list.png)
+
+- When a user is logged in, they can view the form and complete it.
+
+![quote-form](readme.docs/quote-form.png)
+
+
+# Testing Backend
+## Validator testing 1
 - The settings page had lines that were too long to pass the test. Please see below:
 
 ![long lines](readme.docs/long-lines-error.png)
@@ -78,8 +149,12 @@ I created an Application Programming Interface (API) using Django REST Framework
 
 ![fixed lines](readme.docs/fixed-lines.png)
 
-#### Python testing
-#### Post Views
+- The form accepts all numbers, which is not helping with better user experience. Please see below:
+
+![unfriendly form](readme.docs/wrong-quote-form.png)
+
+## Python testing
+### Post Views
 <strong>A.</strong>  
 - I tested if the Posts can be listed. 
 - The first test failed due to incorrect status code. Please see below:
@@ -167,16 +242,14 @@ I created an Application Programming Interface (API) using Django REST Framework
 - After fixing the status code, the test finally passed. Please see below:
 
 ![!update-other-post-pass](readme.docs/!update-other-post-pass.png)
+ 
 
-
-In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 error detected. 
-
-#### Manual Testing
+## Manual Testing - backend
 * In the process of developing the backend project, I manually tested features that users will use:
 [List of manual tests - BACKEND](manual_testing_back.md)
 
-### Backend Deployement
-### PostgreSQL
+# Backend Deployement
+## PostgreSQL
 1. Navigate to PostgreSQL from Code Institute. Enter email address and click submit:
 
 ![PostgreSQL](readme.docs/postgresql.png)
@@ -185,7 +258,7 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 
 ![success email](readme.docs/success-email.png)
 
-### Heroku
+## Heroku 1
 3. Log into Heroku and go to the *Dashboard*:
 
 ![dasboard](readme.docs/dashboard.png)
@@ -210,7 +283,7 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 
 ![config vars](readme.docs/config-vars.png)
 
-### IDE
+## IDE
 9. On VSCode, update the *DATABASES* on the settings.py file:
 
 ![databases-settings](readme.docs/database-sett.png)
@@ -227,7 +300,7 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 
 ![Procfile](readme.docs/procfile.png)
 
-### Heroku
+## Heroku 2
 13. On Heroku settings, added two more Config Vars: CLOUDINARY_URL and SECRET_KEY:
 
 ![last-config](readme.docs/last-config.png)
@@ -241,7 +314,7 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 ![deployed](readme.docs/deployed.png)
 
 
-### Creating a new React app in an existing LINS workspace
+# Creating a new React app in an existing LINS workspace
 * How I started a React Project inside the *LINS* project:
     - Inside the workspace, I created a directory called *frontend* in the terminal
 
@@ -259,9 +332,9 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
     - First terminal would be the Django API directory, then the second one would be the frontend directory.
     ![two-terminals](readme.docs/two-terminals.png)
 
-## Features Frontend
+# Features Frontend
 
-### Navigation Bar
+## Navigation Bar
 - When a user is not yet logged in, the below is what the navigation bar looks like.
 - It consists of a logo (a cow's head with Lobola Insurance written on it on a white background)
 
@@ -271,7 +344,7 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 
 ![navbar loggedin](readme.docs/navbar-loggedin.png)
 
-### The home page
+## The home page
 - This includes a photograph of for men (uncles) negotiating the price for the Lobola
 - On the the image is a text overlay which attracts the user to browse through the site
 - Below the text are two buttons, one to get a quote of the insurance offered, and the other is to learn more about the site. Please see image below:
@@ -286,19 +359,19 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 
 ![learn more](readme.docs/learn-more.png)
 
-#### How it works section
+### How it works section
 - Below the landing image is a section that tells user what the insurance offeres
 - It is just a brief explanation of what is included. Please see below:
 
 ![how it works section](readme.docs/how-it-works.png)
 
-### Add post feature
+## Add post feature
 - A user can upload an image of choice to share their big day.
 - A user is able to create posts in order to share with others. Please see below:
 
 ![add post](readme.docs/add-post.png)
 
-### The post page
+## The post page
 - Here users are able to view the most recent posts.
 - On this page, one  can view the most followed profiles.
 - Users are able to like other people's posts and comment on them.
@@ -307,36 +380,41 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 
 ![post page](readme.docs/post-page.png)
 
-#### Comment section
+### Comment section
 - A user is able to comment on a post
 - They can also edit and delete their comment by clicking the Kebab Menu for the options. Please see below image:
 
 ![comment section](readme.docs/comment-section.png)
 
-### Profile page
+## Profile page
 - The profile page shows the number of posts a user has and also the number of followers. Please see below:
 
 ![profile page](readme.docs/profile-page.png)
 
-### Sign In Page
+## Sign In Page
 * A user is then prompted to sign in if the have already been able to signup
 * A beautiful image of rings shows what the the user is getting themselves into
 
 ![Sign In page](readme.docs/signin.png)
 
-### Sign Up Page
+## Sign Up Page
 * If a user has not signed yet, they can simply signup to be a part of the community. Please see image below:
 
 ![Sign Up page](readme.docs/signup.png)
 
+## Quotes Page
+* A user can create a quote in order to see how much premium they should pay on a monthly basis.
+* There are 10 questions that a user needs to answer in order for us to know how much his insurance is worth in total.
+* The form is created from a Range Slider which means a user has to slide the bar in order to answer a questions
+* All questions have to be answered in order for the monthly premim to be calculated
 
-### Features Left To Implement
+# Features Left To Implement
 * Add buttons to the quote so that users can apply for the insurance.
 * Create terms and conditions regarding payouts
 
-## Testing
 
-### Manual Testing Frontend
+# Testing Frontend
+## Manual Testing Frontend
 * When a user tries to submit an empty signin/signup form, the form is defensive. Users have to complete all fields. Please see image below:
 
 ![Defensive Form](readme.docs/defensive-form.png)
@@ -345,12 +423,16 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 
 ![defensive like button](readme.docs/no-like-button.png)
 
+* I created a form with select options, the value option I used to render did not work. Please see image below:
+
+![select-form](readme.docs/select-form.png)
+
 * In the process of developing this website/app, I manually tested features that users will use:
 
-![List of manual tests](manual_testing_front.md)
+[List of manual tests](manual_testing_front.md)
 
 
-### Validator Testing
+## Validator Testing 2
 - HTML:
     * There appears to be errors on the index.html file.
     * These errors are part of the package and cannot be changed. Please see below:
@@ -363,7 +445,7 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
     ![lighthouse issue](readme.docs/lighthouse-issue.png)
 
 
-### Unfixed Bugs
+# Unfixed Bugs
 
 * When I access the app, before I signin or click any button I get the below errors on dev tools. The default profile image is not readable. Please see image below:
 
@@ -372,8 +454,8 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 * <strong>Django REST Framework:</strong> The profile page is not showing the HTML form, meaning that it is not allowing users to create profiles even when authenticated.
 
 
-## User Stories 
-##### Fulfilled User Stories
+# User Stories 
+## Fulfilled User Stories
 * <strong>View Profile Page:</strong> This user story is to allow users to view other users profiles. This user story was indeed fulfilled.
 * <strong>Edit Posts:</strong> This user story allows users to edit their posts. But another user is restricted from editing another users profile or post.
 * <strong>Display Posts Lists:</strong> As a owner, I created a platform for users to display their posts.
@@ -384,11 +466,12 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 * <strong>Create Quote Button:</strong> A button is created for users to click on in order to get a quote on the type of insurance that suites them.
 * <strong>Click Learn More Button:</strong> On this button a user is able to read more about what the site offers.
 
-##### Unfulfilled User Story
+
+## Unfulfilled User Story
 * <strong>Create select quote button:</strong> These buttons were supposed to be active so that a user can select the type of quote they can offer. However, now I have decided to add them on future implementations.
 
 
-## Deployement
+# Deployement - Frontend
 * I followed the Advanced Front End: Deployement of both applications instructions:
     - Setting up WhiteNoise for static files by installing whitenoise
     - Creating staticfiles to the directory
@@ -407,9 +490,8 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 * Go to Deploy page and deploy my project.
 
 
-## Credits
-
-### Acknowledge
+# Credits
+## Acknowledge
 * Sarah, a Tutor of CI, helped me with the sign out link. I could not sign out once signed in, and Sarah helped me find my way to fixing the issue.
 * I have issues with the URLS. A couple of tutors tried to help me position the URL's at the right places namely: Rebecca, Sarah, Roman
 * Oisin, a Tutor of CI, helped me with getting my workspaces set up as I was struggling with the commands given to set it up.
@@ -423,11 +505,8 @@ In total, I managed to test 7 functions. Out of the 7 only 5 have passed and 1 e
 * LanaD, an alumni, tested my the functionality of my project and sent feedback.
 
 
-### Media
+## Media
 * The images used on this app are taken from various sites: ChatGPT, [Pixabay](https://pixabay.com/images/search/cow%20with%20rings%20%20logo/)
 * The logo image used is taken from [ChatGPT](https://chatgpt.com/s/m_6821d556cde88191b13fd8483534c194)
 * Some of the images were created with ChatGPT to suite the insurance site.
 * I used this site to create Manual testing [Tables Generator](https://www.tablesgenerator.com/markdown_tables)
-
-
-

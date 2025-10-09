@@ -360,19 +360,19 @@ function QuoteCreateForm(props) {
       ))}
             
             {/* <div>{premiumPlan}</div> */}
-            <Form>
-      <Row>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-          <Container
-            className={`${styles.Container} d-flex flex-column justify-content-center`}
-          >
-                        <div>{premiumPlan}</div>
+            {/* <Form> */}
+                <Row>
+                    <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+                    <Container
+                        className={`${styles.Container} d-flex flex-column justify-content-center`}
+                    >
+                                    <div>{premiumPlan}</div>
 
-          </Container>
-        </Col>
-        
-      </Row>
-    </Form>
+                    </Container>
+                    </Col>
+                    
+                </Row>
+            {/* </Form> */}
 
        
         <Button
