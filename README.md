@@ -351,7 +351,8 @@ I created an Application Programming Interface (API) using Django REST Framework
 
 ![hero image](readme.docs/hero-image.png)
 
-- When a user clicks the 'Get a Quote' button, they are able to view the quotes we offer. Please see below:
+- When a user clicks the 'Info' button, they are redirected to the an info page that explains what the insurance entails. Please see below:
+- Once a user is done reading the information, they can navigate back to the navigation bar.
 
 ![quote](readme.docs/quote.png)
 
@@ -477,7 +478,7 @@ I created an Application Programming Interface (API) using Django REST Framework
     - Update template directories
     - On the Django Rest Framework urls I made changes to configure the route in order to allow my Lobolo Insurance website to be viewed.
 
-    ![url](image.png)
+    ![url-path](readme.docs/url-path.png)
 
     - Inside the axiosDefault.js I set the baseURL in order to be able to deploy
 
@@ -501,6 +502,7 @@ I created an Application Programming Interface (API) using Django REST Framework
 * Moritz, a mentor, helped with understanding how manual testing should be done.
 * Manual testing structure that my Mentor advised me to check, I got from this site [Cushione](https://github.com/Cushione/fantastic-news/blob/main/manual_testing.md)
 * LanaD, an alumni, tested my the functionality of my project and sent feedback.
+* Vusi, a former CI student, tested the functionality of my project and gave feedback.
 
 
 ## Media
