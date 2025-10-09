@@ -408,6 +408,8 @@ I created an Application Programming Interface (API) using Django REST Framework
 * The form is created from a Range Slider which means a user has to slide the bar in order to answer a questions
 * All questions have to be answered in order for the monthly premim to be calculated
 
+![quote-form-premium](readme.docs/quote-form-premium.png)
+
 # Features Left To Implement
 * Add buttons to the quote so that users can apply for the insurance.
 * Create terms and conditions regarding payouts
@@ -467,10 +469,6 @@ I created an Application Programming Interface (API) using Django REST Framework
 * <strong>Click Learn More Button:</strong> On this button a user is able to read more about what the site offers.
 
 
-## Unfulfilled User Story
-* <strong>Create select quote button:</strong> These buttons were supposed to be active so that a user can select the type of quote they can offer. However, now I have decided to add them on future implementations.
-
-
 # Deployement - Frontend
 * I followed the Advanced Front End: Deployement of both applications instructions:
     - Setting up WhiteNoise for static files by installing whitenoise
@@ -484,8 +482,8 @@ I created an Application Programming Interface (API) using Django REST Framework
     - Inside the axiosDefault.js I set the baseURL in order to be able to deploy
 
 * Combining both Django and React static files and compiling them
-* Add runtime.txt file to ensure Heroku uses the correct version of Python to deploy my project
-* Test functionality of the URL
+* Add runtime.txt file to ensure Heroku uses the correct version of Python (3.12.8) to deploy my project
+* Test functionality of the combined URL
 * On the Heroku App, inside Settings, add ALLOWED_HOST and CLIENT_ORIGIN inside Config Vars
 * Go to Deploy page and deploy my project.
 

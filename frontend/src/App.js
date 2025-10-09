@@ -15,7 +15,7 @@ import UsernameForm from './pages/profiles/UsernameForm';
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import HomePage from './components/HomePage';
-// import GetAQuote from "./pages/quotes/GetAQuote";
+import Info from "./pages/quotes/Info";
 import LearnMore from './pages/quotes/LearnMore';
 import NotFound from './components/NotFound';
 import Quote from './pages/quotes/Quote';
@@ -69,7 +69,7 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
-          {/* <Route path="/quotes" render={() => <GetAQuote />} /> */}
+          <Route path="/info" render={() => <Info />} />
           <Route path="/more" render={() => <LearnMore />} />
           <Route render={() => <NotFound />} /> 
         </Switch>

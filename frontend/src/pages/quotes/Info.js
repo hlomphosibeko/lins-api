@@ -4,7 +4,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Table from 'react-bootstrap/Table';
 
 
-function GetAQuote() {
+function Info() {
 
     return (
         <Card style={{ width: '45rem' }} className='text-center'>
@@ -52,15 +52,12 @@ function GetAQuote() {
                             <tr>
                                 <td>
                                     <strong>Basic Plan Type:</strong> R150/month = R20,000 Maximum Coverage
-                                    <div><em>'Coming Soon'</em></div>
                                 </td>
                                 <td>
                                     <strong>Standard Plan Type:</strong> R250/month = R40,000 Maximum Coverage 
-                                    <div><em>'Coming Soon'</em></div>
                                 </td>
                                 <td>
                                     <strong>Premium Plan Type:</strong> R400/month = R70,000 Maximum Coverage 
-                                    <div><em>'Coming Soon'</em></div>
                                 </td>
                             </tr>
                         </tbody>  
@@ -122,4 +119,4 @@ function GetAQuote() {
     )
 }
 
-export default GetAQuote
+export default Info

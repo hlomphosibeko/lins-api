@@ -11,7 +11,7 @@ const HomePage = () => {
     const history = useHistory();
 
     const handleClick = () => {
-        history.push('/quotes');
+        history.push('/info');
     }
 
     const handleMore = () => {
@@ -32,7 +32,7 @@ const HomePage = () => {
                 <Button
                  className={`${btnStyles.Button} ${btnStyles.Brown}`}
                  onClick={handleClick}>
-                    Get a Quote
+                    Info
                 </Button>
                 <Button
                  className={`${btnStyles.Button} ${btnStyles.Secondary}`}

@@ -46,13 +46,6 @@ function QuoteCreateForm(props) {
 
             setPremiumPlan(quoter)
         }, [])
-        
-
-        // parseFloat((1/parseInt(innocence)*(500/(1+parseInt(age))+500/(1+parseInt(numKids))+500/(1+parseInt(numMarried))+500*parseInt(tertiaryEducation)
-        //                         +500*parseInt(cooker)+500*parseInt(neat)+500*parseInt(steadyIncome)+500*parseInt(personality)+500*parseInt(spirituality)))/12).toFixed(2)
-        // )
-    // }
-        // console.log(premiumPlan)
 
     const quoteData = {
         age,
@@ -105,24 +98,6 @@ function QuoteCreateForm(props) {
         }
        // clearForm()
     };
-
-    
-
-    //         <Button
-    //          className={`${btnStyles.Button} ${btnStyles.Brown}`}
-    //          onClick={() => {}}>
-    //             cancel
-    //         </Button>
-    //         <Button
-    //          className={`${btnStyles.Button} ${btnStyles.Brown}`}
-    //          onClick={() => {}}
-    //          type="submit">
-    //             create
-    //         </Button>
-    //         </Form>
-    //     </div>
-
-    // );
 
       
     return(
