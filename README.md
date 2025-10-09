@@ -455,6 +455,11 @@ I created an Application Programming Interface (API) using Django REST Framework
 ![Dev Tools](readme.docs/console.png)
 
 * <strong>Django REST Framework:</strong> The profile page is not showing the HTML form, meaning that it is not allowing users to create profiles even when authenticated.
+* The deployed version on Heroku does not seem to work like the one from IDE
+* Authentication does not seem to work
+* The quote form does not submit
+* When Profile page is clicked, the site redirects to Home page
+* Deployed api does not allow authentication
 
 
 # User Stories 
@@ -503,6 +508,7 @@ I created an Application Programming Interface (API) using Django REST Framework
 * Manual testing structure that my Mentor advised me to check, I got from this site [Cushione](https://github.com/Cushione/fantastic-news/blob/main/manual_testing.md)
 * LanaD, an alumni, tested my the functionality of my project and sent feedback.
 * Vusi, a former CI student, tested the functionality of my project and gave feedback.
+* Jannick Leismann from Udemy with the process on how to create a quote form using React. [JannickLeismann](https://github.com/JannickLeismann)
 
 
 ## Media
