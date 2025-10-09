@@ -85,8 +85,6 @@ const NavBar = () => {
   );
   const loggedOutIcons = (
     <>
-      
-      {createQuoteIcon}
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
@@ -120,6 +118,7 @@ const NavBar = () => {
           </Navbar.Brand>
         </NavLink>
         {currentUser && addPostIcon}
+        {currentUser && createQuoteIcon}
         <Navbar.Toggle
          ref={ref} onClick={() => setExpanded(!expanded)} aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
