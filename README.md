@@ -460,6 +460,7 @@ I created an Application Programming Interface (API) using Django REST Framework
 * The quote form does not submit
 * When Profile page is clicked, the site redirects to Home page
 * Deployed api does not allow authentication
+* Page refreshes constantly
 
 
 # User Stories 
